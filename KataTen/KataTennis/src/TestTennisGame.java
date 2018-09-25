@@ -18,6 +18,14 @@ public class TestTennisGame {
 		this.game = null;
 	}
 
+	private void setterScores(int score1, int score2) {
+		for(int i = 0; i < score1; i++)
+			this.game.player1Scores();
+		
+		for(int j = 0; j < score2; j++)
+			this.game.player2Scores();
+	}
+	
 	@Test
 	public void testNouveauJeu() {
 		
@@ -28,7 +36,7 @@ public class TestTennisGame {
 	@Test
 	public void testJoueur1Marque1Point() {
 		
-		this.game.player1Scores();
+		setterScores(1,0);
 		assertEquals("fifteen - love" , this.game.currentScore());
 		
 	}
@@ -36,7 +44,7 @@ public class TestTennisGame {
 	@Test
 	public void testJoueur2Marque1Point() {
 		
-		this.game.player2Scores();
+		setterScores(0,1);
 		assertEquals("love - fifteen" , this.game.currentScore());
 		
 	}
@@ -44,8 +52,7 @@ public class TestTennisGame {
 	@Test
 	public void testJoueur1Et2Marquent1Point() {
 		
-		this.game.player2Scores();
-		this.game.player1Scores();
+		setterScores(1,1);
 		assertEquals("fifteen - fifteen" , this.game.currentScore());
 		
 	}
@@ -53,8 +60,7 @@ public class TestTennisGame {
 	@Test
 	public void testJoueur1Marque2Points() {
 		
-		this.game.player1Scores();
-		this.game.player1Scores();
+		setterScores(2,0);
 		assertEquals("thirty - love" , this.game.currentScore());
 		
 	}
@@ -62,8 +68,7 @@ public class TestTennisGame {
 	@Test
 	public void testJoueur2Marque2Points() {
 		
-		this.game.player2Scores();
-		this.game.player2Scores();
+		setterScores(0,2);
 		assertEquals("love - thirty" , this.game.currentScore());
 		
 	}
@@ -71,20 +76,17 @@ public class TestTennisGame {
 	@Test
 	public void testJoueur1Et2Marquent2Points() {
 		
-		this.game.player2Scores();
-		this.game.player2Scores();
-		this.game.player1Scores();
-		this.game.player1Scores();
+		setterScores(2,2);
 		assertEquals("thirty - thirty" , this.game.currentScore());
 		
 	}
+
+	
 	
 	@Test
 	public void testJoueur1Marque3Points() {
 		
-		this.game.player1Scores();
-		this.game.player1Scores();
-		this.game.player1Scores();
+		setterScores(3,0);
 		assertEquals("forty - love" , this.game.currentScore());
 		
 	}
@@ -92,9 +94,7 @@ public class TestTennisGame {
 	@Test
 	public void testJoueur2Marque3Points() {
 		
-		this.game.player2Scores();
-		this.game.player2Scores();
-		this.game.player2Scores();
+		setterScores(0,3);
 		assertEquals("love - forty" , this.game.currentScore());
 		
 	}
