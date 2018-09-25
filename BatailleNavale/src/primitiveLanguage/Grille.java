@@ -1,6 +1,6 @@
 package primitiveLanguage;
 
-public class Interaction {
-
+public class Grille {
+	
 	
 }

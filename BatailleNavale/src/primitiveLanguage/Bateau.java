@@ -13,6 +13,7 @@ public class Bateau {
 	private Element[] bateau;
 	
 	/**Constructeur
+	 * 
 	 * @param nom nom du bateau
 	 * @param tailleBateau taille du bateau
 	 */
@@ -23,6 +24,7 @@ public class Bateau {
 	}
 	
 	/**Place tout les éléments du bateau selon les coordonnées et le sens
+	 * 
 	 * @param lettre coordonnée 1
 	 * @param chiffre coordonnée 2
 	 * @param sens V ou H, vertical ou horizontal
