@@ -15,7 +15,7 @@ public class TestTennisGame {
 
 	@After
 	public void tearDown() throws Exception {
-		this.game = null;
+		this.game = null ;
 	}
 
 	private void setterScores(int score1, int score2) {
