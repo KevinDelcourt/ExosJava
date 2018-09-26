@@ -23,10 +23,10 @@ public class Bateau {
 		this.bateau = new Element[tailleBateau];
 	}
 	
-	/**Place tout les éléments du bateau selon les coordonnées et le sens
+	/**Place tout les ï¿½lï¿½ments du bateau selon les coordonnï¿½es et le sens
 	 * 
-	 * @param lettre coordonnée 1
-	 * @param chiffre coordonnée 2
+	 * @param lettre coordonnï¿½e 1
+	 * @param chiffre coordonnï¿½e 2
 	 * @param sens V ou H, vertical ou horizontal
 	 */
 	public void placerBateau(char lettre, int chiffre, char sens) {
@@ -48,7 +48,107 @@ public class Bateau {
 		}
 
 	}
+
+	/** renvoie true si la coo passee en parametre appartient au tableau
+	 * @param lettre coo 1
+	 * @param chiffre coo2
+	 * @return boolean - true si la coo en parametre correspond a un element du bateau
+	 */
+	public boolean appartientBateau(char lettre,int chiffre) {
+		
+		boolean appartient = false;
+		
+		for(int i = 0; i < this.bateau.length; i++) 
+			appartient = appartient || bateau[i].verifierCoordonnees(lettre, chiffre) ;
+		
+		
+		return appartient;
+	}
 	
+	/** Simule un tir sur le bateau avec les coordonnes passees en param
+	 *  Change l'etat du bateau en consequence
+	 * @param lettre coordonnee 1
+	 * @param chiffre coordonnee 2
+	 * @return boolean true si le coup est bon, faux sinon
+	 */
+	public boolean coup(char lettre, int chiffre) {
+		
+		boolean resultat = false;
+		
+		for(int i = 0; i < this.bateau.length; i++) 	
+			if( bateau[i].verifierCoordonnees(lettre, chiffre) && !bateau[i].isElementTouche()) {
+				
+				bateau[i].touche();
+				resultat = true;
+				
+				if(this.isCoule()) {
+					etatBateau = 'C';
+				}else {
+					etatBateau = 'T';
+				}
+			}
+		
+		return resultat;
+	}
 	
+	/**
+	 * @return int la taille du bateau
+	 */
+	public int getTailleBateau() {
+		return tailleBateau;
+	}
+
+	/**
+	 * @param tailleBateau int la nouvelle taille du bateau en cases
+	 */
+	public void setTailleBateau(int tailleBateau) {
+		this.tailleBateau = tailleBateau;
+	}
+
+	/**
+	 * @return char - l'etat du bateau
+	 */
+	public char getEtatBateau() {
+		return etatBateau;
+	}
+
+	/**
+	 * @param etatBateau char le nouvel etat du bateau
+	 */
+	public void setEtatBateau(char etatBateau) {
+		this.etatBateau = etatBateau;
+	}
+	
+	/** regarde tout les elements du bateau pour voir si ils sont tous touche
+	 * @return vrai si le bateau est coule
+	 */
+	private boolean isCoule(){
+		boolean resultat = true;
+		
+		for(int i = 0; i < this.bateau.length; i++) 	
+			resultat = resultat && bateau[i].isElementTouche();
+		
+		return resultat;
+	}
+	
+	/** retourne le caractÃ¨re de l'etat de l'element cible par les coordonnes
+	 * @param lettre coordonnees 1
+	 * @param chiffre coordonnees 2
+	 * @return S pour Sain, T pour touchÃ©, C pour coulÃ©, X si les coordonnees ne sont pas bonnes
+	 */
+	public char getEtatElement(char lettre, int chiffre) {
+		char etat = 'X';
+		
+		for(int i = 0; i < this.bateau.length; i++)
+			if(bateau[i].verifierCoordonnees(lettre, chiffre) && bateau[i].isElementTouche() && etatBateau =='C'){
+				etat = 'C';
+			}else if(bateau[i].verifierCoordonnees(lettre, chiffre) && bateau[i].isElementTouche()) {
+				etat = 'T';
+			}else if(bateau[i].verifierCoordonnees(lettre, chiffre)) {
+				etat = 'S';
+			}
+			
+		return etat;
+	}
 	
 }

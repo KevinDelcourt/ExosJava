@@ -1,7 +1,7 @@
 package primitiveLanguage;
 
 /**
- * Un élément d'un bateau, occupe une case
+ * Un ï¿½lï¿½ment d'un bateau, occupe une case
  * 
  * @author dlk1560a
  *
@@ -15,8 +15,8 @@ public class Element {
 		/**
 		 * Constructeur
 		 * 
-		 * @param lettre Coordonnée 1
-		 * @param chiffre Coordonnée 2
+		 * @param lettre Coordonnï¿½e 1
+		 * @param chiffre Coordonnï¿½e 2
 		 */
 		public Element(char lettre, int chiffre) {
 			this.lettre = lettre;
@@ -24,7 +24,7 @@ public class Element {
 		}
 		
 		
-		/**vrai si l'élément est touché, faux sinon
+		/**vrai si l'ï¿½lï¿½ment est touchï¿½, faux sinon
 		 * @return elementtouche
 		 */
 		public boolean isElementTouche() {
@@ -34,13 +34,12 @@ public class Element {
 		}
 		
 		
-		/** vrai si les coordonnées en paramètre correspondent à celles du bateau
-		 * @param lettre coordonnée 1
-		 * @param chiffre coordonnée 2
-		 * @param sens H ou V, donne le sens
+		/** vrai si les coordonnï¿½es en paramï¿½tre correspondent ï¿½ celles du bateau
+		 * @param lettre coordonnï¿½e 1
+		 * @param chiffre coordonnï¿½e 2
 		 * @return vrai ou faux
 		 */
-		public boolean verifierCoordonnees(char lettre, int chiffre, char sens) {
+		public boolean verifierCoordonnees(char lettre, int chiffre) {
 			
 			return (this.lettre == lettre)&&(this.chiffre == chiffre);
 			
@@ -48,7 +47,7 @@ public class Element {
 		
 		
 		/**
-		 * L'élément est touché, passe elementTouche à true
+		 * L'ï¿½lï¿½ment est touchï¿½, passe elementTouche ï¿½ true
 		 */
 		public void touche() {
 			

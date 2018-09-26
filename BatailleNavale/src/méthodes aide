@@ -1,64 +1,8 @@
 méthodes pour aider
 
-char jouerCoup(char lettre, int chiffre) {
-	char resultat = '0';
-	int[] coordonne = new int[2];
-	coordonne[0] = lettre;
-	coordonne[1] = chiffre;
-	coupJoue.add(coordonne);
-	for (int i = 0; i < nbBateau; i++) {
-		if (flotte[i].coup(lettre, chiffre)) {
-			resultat = (flotte[i].getEtatBateau());
-		}
-	}
-	return resultat;
-}
-
-public String jouer(int joueur, char lettre, int chiffre) {
-	char resultat;
-	if (joueur == 1) {
-		resultat = grilleJoueur2.jouerCoup(lettre, chiffre);
-	} else {
-		resultat = grilleJoueur1.jouerCoup(lettre, chiffre);
-	}
-	if (resultat == 'C')
-		return "Bateau coule";
-	else if (resultat == 'T')
-		return "Bateau touche";
-	else
-		return "A l'eau";
-}
 
 
-public boolean finDuJeu() {
-	return (grilleJoueur1.flotteCoulee() || grilleJoueur2
-		.flotteCoulee());
-}
 
-
-public char affichageElementGrilleCoteJoueur(int joueur, char 
-		lettre, int chiffre) {
-	if (joueur == 1)
-		return grilleJoueur1.visualisationCaseGrille(lettre, chiffre);
-	else
-		return grilleJoueur2.visualisationCaseGrille(lettre, chiffre);
-}
-
-
-public char affichageElementGrilleCoteAdversaire(int joueur, char 
-		lettre, int chiffre) {
-	char visualisationElement;
-	if (joueur == 1)
-		visualisationElement = grilleJoueur1.visualisationCaseGrille(
-				lettre, chiffre);
-	else
-		visualisationElement = grilleJoueur2.visualisationCaseGrille(
-				lettre, chiffre);
-	if (visualisationElement == 'S')
-		return 'X';
-	else
-		return visualisationElement;
-}
 
 private void affichageGrilleCoteJoueur(int joueur) {
 	System.out.println("Ma grille");
