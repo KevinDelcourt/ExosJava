@@ -23,7 +23,7 @@ public class Bateau {
 		this.bateau = new Element[tailleBateau];
 	}
 	
-	/**Place tout les �l�ments du bateau selon les coordonn�es et le sens
+	/**Place tout les elements du bateau selon les coordonn�es et le sens
 	 * 
 	 * @param lettre coordonn�e 1
 	 * @param chiffre coordonn�e 2
@@ -56,13 +56,17 @@ public class Bateau {
 	 */
 	public boolean appartientBateau(char lettre,int chiffre) {
 		
-		boolean appartient = false;
+		boolean appartientBateau = false;
 		
-		for(int i = 0; i < this.bateau.length; i++) 
-			appartient = appartient || bateau[i].verifierCoordonnees(lettre, chiffre) ;
-		
-		
-		return appartient;
+		for(int i = 0; i < this.bateau.length; i++) {
+			boolean appartient = bateau[i].verifierCoordonnees(lettre, chiffre);
+			
+			if(appartient) {
+				appartientBateau = appartient;
+			}
+		}
+			
+		return appartientBateau;
 	}
 	
 	/** Simule un tir sur le bateau avec les coordonnes passees en param
@@ -137,7 +141,7 @@ public class Bateau {
 	 * @return S pour Sain, T pour touché, C pour coulé, X si les coordonnees ne sont pas bonnes
 	 */
 	public char getEtatElement(char lettre, int chiffre) {
-		char etat = 'X';
+		char etat = '_';
 		
 		for(int i = 0; i < this.bateau.length; i++)
 			if(bateau[i].verifierCoordonnees(lettre, chiffre) && bateau[i].isElementTouche() && etatBateau =='C'){

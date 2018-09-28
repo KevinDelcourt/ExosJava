@@ -130,7 +130,7 @@ public class Jeu {
 			visualisationElement = grille2.visualisationCaseGrille(
 					lettre, chiffre);
 		if (visualisationElement == 'S')
-			return 'X';
+			return '_';
 		else
 			return visualisationElement;
 	}
