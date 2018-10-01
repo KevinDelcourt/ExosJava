@@ -3,14 +3,21 @@ package livre;
 //import jeuRole.Dragon;
 //import jeuRole.EntiteLivre;
 //import jeuRole.Epee;
-//import jeuRole.Heros;
-//import jeuRole.Homme;
+import jeuRole.EtreVivant;
+import jeuRole.Heros;
+import jeuRole.Homme;
 //import jeuRole.LancePierre;
 
 public class MonHistoire {
 
 	public static void main(String[] args) {
 
+		Homme homme = new Homme("Oui");
+		Heros heros = new Heros("Non");
+		homme.parler("Bojour");
+		System.out.println("\n");
+		heros.parler("Bonjour!");
+		
 //		Livre livre = new Ecran();
 //		Livre livre = new Fichier();
 //		EntiteLivre.affecterLivre(livre);

@@ -5,8 +5,9 @@ public class EtreVivant {
 	private String nom;
 	protected int qteVie;
 	
-	EtreVivant(String nom){
+	public EtreVivant(String nom, int qteVie){
 		this.nom = nom;
+		this.qteVie = qteVie;
 	}
 	
 	public String getNom() {
