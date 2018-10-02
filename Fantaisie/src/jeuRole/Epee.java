@@ -13,5 +13,4 @@ public class Epee extends Arme {
 		return nom;
 	}
 	
-	
 }

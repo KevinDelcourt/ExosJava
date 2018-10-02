@@ -9,11 +9,13 @@ public class Dragon extends EtreVivant {
 		
 	}
 	
+	@Override
 	public void rejointBataille(Bataille bataille) {
 		super.rejointBataille(bataille);
 		bataille.ajouter(this);
 	}
 	
+	@Override
 	public void mourir() {
 		super.mourir();
 		bataille.eliminer(this);

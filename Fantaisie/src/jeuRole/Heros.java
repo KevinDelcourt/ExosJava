@@ -8,6 +8,7 @@ public class Heros extends Homme {
 		super.qteVie = 150;
 	}
 	
+	@Override
 	public void parler(String texte) {
 		System.out.print("Le héros ");
 		super.parler(texte);

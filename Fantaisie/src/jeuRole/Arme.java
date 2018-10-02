@@ -9,19 +9,14 @@ abstract class Arme {
 	public Arme(String nature, int degats) {
 		this.nature = nature;
 		this.degats = degats;
-;	}
+	}
 	
 	public Homme getProprietaire() {
 		return proprietaire;
 	}
-	public void setProprietaire(Homme proprietaire) {
-		this.proprietaire = proprietaire;
-	}
+	
 	public String getNature() {
 		return nature;
-	}
-	public void setNature(String nature) {
-		this.nature = nature;
 	}
 	
 	public boolean estPris() {

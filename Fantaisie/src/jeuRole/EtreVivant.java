@@ -35,7 +35,6 @@ public class EtreVivant {
 	}
 	
 	protected void mourir() {
-		//System.out.print(this.nom + " est mort.");
 	}
 	
 	public void rejointBataille(Bataille bataille) {

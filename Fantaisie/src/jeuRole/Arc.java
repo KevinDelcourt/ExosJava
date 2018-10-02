@@ -9,6 +9,7 @@ public class Arc extends Arme {
 		this.nbrFleche = nbrFleche;
 	}
 	
+	@Override
 	public void attaque(Dragon dragon) {
 		
 		if(nbrFleche > 0) {
