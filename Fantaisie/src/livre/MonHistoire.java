@@ -1,42 +1,38 @@
 package livre;
 
-//import jeuRole.Dragon;
+import jeuRole.Arc;
+import jeuRole.Bataille;
+import jeuRole.Dragon;
 //import jeuRole.EntiteLivre;
-//import jeuRole.Epee;
-import jeuRole.EtreVivant;
+import jeuRole.Epee;
 import jeuRole.Heros;
 import jeuRole.Homme;
-//import jeuRole.LancePierre;
+import jeuRole.LancePierre;
 
 public class MonHistoire {
 
 	public static void main(String[] args) {
 
-		Homme homme = new Homme("Oui");
-		Heros heros = new Heros("Non");
-		homme.parler("Bojour");
-		System.out.println("\n");
-		heros.parler("Bonjour!");
 		
 //		Livre livre = new Ecran();
 //		Livre livre = new Fichier();
 //		EntiteLivre.affecterLivre(livre);
-//
-//		Bataille bataille = new Bataille();
-//
-//		Dragon dragonRouge = new Dragon("Rougeoyant");
-//		Dragon dragonet = new Dragon("Dragonet");
-//		Homme thomas = new Homme("Thomas");
-//		Heros arthur = new Heros("Arthur");
-//		Epee excalibur = new Epee("Excalibur");
-//		Arc transperce = new Arc(3);
-//		LancePierre lancePierre = new LancePierre(); 
-//		
-//		dragonRouge.rejointBataille(bataille);
-//		dragonet.rejointBataille(bataille);
-//		thomas.rejointBataille(bataille);
-//		arthur.rejointBataille(bataille);
-//		
+
+		Bataille bataille = new Bataille();
+
+		Dragon dragonRouge = new Dragon("Rougeoyant");
+		Dragon dragonet = new Dragon("Dragonet");
+		Homme thomas = new Homme("Thomas");
+		Heros arthur = new Heros("Arthur");
+		Epee excalibur = new Epee("Excalibur");
+		Arc transperce = new Arc(3);
+		LancePierre lancePierre = new LancePierre(); 
+		
+		dragonRouge.rejointBataille(bataille);
+		dragonet.rejointBataille(bataille);
+		thomas.rejointBataille(bataille);
+		arthur.rejointBataille(bataille);
+		
 //		arthur.prendre(excalibur);
 //		arthur.combattre(dragonet);
 //		dragonRouge.cracheBouleFeu(arthur);
