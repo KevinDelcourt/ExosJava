@@ -32,7 +32,7 @@ abstract class Arme {
 	}
 	
 	public void attaque(Dragon dragon) {
-		System.out.print(proprietaire.getNom() + " attaque " + dragon.getNom() + " avec son " + nature);
+		EntiteLivre.livre.ecrire(proprietaire.getNom() + " attaque " + dragon.getNom() + " avec son " + nature + "\n");
 		dragon.subirAttaque(degats);
 	}
 }

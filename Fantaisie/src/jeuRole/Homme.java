@@ -2,13 +2,15 @@ package jeuRole;
 
 public class Homme extends EtreVivant {
 	
+	private Arme maPossetion;
+	
 	public Homme(String nom){
 		super(nom,100);
 		
 	}
 	
 	public void parler(String texte) {
-		System.out.print( getNom() + " : " + texte);
+		EntiteLivre.livre.ecrire( getNom() + " : " + texte);
 	}
 	
 	@Override
@@ -19,8 +21,14 @@ public class Homme extends EtreVivant {
 	
 	@Override
 	public void mourir() {
-		super.mourir();
+		
 		bataille.eliminer(this);
-		System.out.print("C'est ainsi que le courageux "+ getNom() + " mourut.");
+		EntiteLivre.livre.ecrire("C'est ainsi que le courageux "+ getNom() + " mourut.");
+	}
+	
+	public void lacher() {
+		EntiteLivre.livre.ecrire(getNom() + " lâche son " + maPossetion.getNature());
+		maPossetion = null;
+		maPossetion.lacher();
 	}
 }

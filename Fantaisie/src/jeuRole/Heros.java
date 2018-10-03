@@ -10,7 +10,7 @@ public class Heros extends Homme {
 	
 	@Override
 	public void parler(String texte) {
-		System.out.print("Le héros ");
+		EntiteLivre.livre.ecrire("Le héros ");
 		super.parler(texte);
 	}
 }

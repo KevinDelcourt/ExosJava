@@ -2,7 +2,7 @@ package jeuRole;
 
 public class Dragon extends EtreVivant {
 	
-	
+	private int nbBoules = 10;
 	
 	public Dragon(String nom){
 		super(nom,200);
@@ -17,8 +17,23 @@ public class Dragon extends EtreVivant {
 	
 	@Override
 	public void mourir() {
-		super.mourir();
+		
 		bataille.eliminer(this);
-		System.out.print("C'est ainsi que le dragon "+ getNom() + " mourut.");
+		EntiteLivre.livre.ecrire("C'est ainsi que le dragon "+ getNom() + " mourut.");
+	}
+	
+	public void cracheBouleFeu(Homme homme) {
+		
+		if(nbBoules >= 0) {
+			homme.subirAttaque(100);
+			
+			EntiteLivre.livre.ecrire(getNom() + " crache une boule de feu sur " + homme.getNom());
+			
+			nbBoules--;
+		}else {
+			
+			EntiteLivre.livre.ecrire(getNom() + " ne pouvait plus cracher de boules de feu! " + homme.getNom() + " a eu beaucoup de chances.");
+		}
+		
 	}
 }

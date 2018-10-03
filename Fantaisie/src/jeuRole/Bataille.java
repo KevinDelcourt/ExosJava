@@ -2,7 +2,7 @@ package jeuRole;
 
 import java.util.Vector;
 
-public class Bataille{
+public class Bataille extends EntiteLivre{
 	private Camps campHomme = new Camps();
 	private Camps campDragon = new Camps();
 
@@ -10,33 +10,33 @@ public class Bataille{
 		campHomme.ajouterEtreVivant(homme);
 		if (campHomme.nbCompagnon() > 1) {
 			homme.parler("Bonjour, je m'appelle " + homme.getNom()
-					+ " et je viens me joindre au combat.");
-		} else
-			System.out.println("\n"
-					+ homme.getNom()
-					+ " est le premier à se joindre à la dernière bataille entre les Hommes et les dragons");
+					+ " et je viens me joindre au combat.\n");
+		} else 
+			EntiteLivre.livre.ecrire("\n"+ homme.getNom() + " est le premier à se joindre à la dernière bataille entre les Hommes et les dragons\n");
+		
+			
 	}
 
 	public void ajouter(Dragon dragon) {
 		campDragon.ajouterEtreVivant(dragon);
 		if (campDragon.nbCompagnon() > 1) {
-			System.out.println("\nUn nouveau dragon " + dragon.getNom()
-					+ " s'approchait du champ de bataille");
+			EntiteLivre.livre.ecrire("\nUn nouveau dragon " + dragon.getNom()
+					+ " s'approchait du champ de bataille\n");
 		} else
-			System.out.println("\nLe dragon " + dragon.getNom()
-					+ " fut le premier à arriver sur le champ de bataille.");
+			EntiteLivre.livre.ecrire("\nLe dragon " + dragon.getNom()
+					+ " fut le premier à arriver sur le champ de bataille.\n");
 	}
 
 	public void eliminer(Dragon dragon) {
 		campDragon.supprimerCompagnon(dragon);
 		if (campDragon.nbCompagnon() == 0 && campHomme.nbCompagnon() > 0)
-			System.out.println("\nLes Hommes ont conquis la lande, leurs villages n'auront plus jamais à trembler devant les dragons");
+			EntiteLivre.livre.ecrire("\nLes Hommes ont conquis la lande, leurs villages n'auront plus jamais à trembler devant les dragons\n");
 	}
 
 	public void eliminer(Homme humain) {
 		campHomme.supprimerCompagnon(humain);
 		if (campHomme.nbCompagnon() == 0 && campDragon.nbCompagnon() > 0)
-			System.out.println("\nLes dragons ont conquit la lande, les Hommes n'ont pas pu survivre dans ce monde hostile");
+			EntiteLivre.livre.ecrire("\nLes dragons ont conquit la lande, les Hommes n'ont pas pu survivre dans ce monde hostile\n");
 	}
 	
 	//TODO Ajout Graphique

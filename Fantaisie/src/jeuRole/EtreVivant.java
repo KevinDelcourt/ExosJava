@@ -1,6 +1,6 @@
 package jeuRole;
 
-public class EtreVivant {
+public abstract class EtreVivant extends EntiteLivre {
 
 	private String nom;
 	protected int qteVie;
@@ -17,25 +17,24 @@ public class EtreVivant {
 	
 	protected void subirAttaque(int force) {
 		
-		System.out.print(this.nom + " subit une violente attaque, ");
+		EntiteLivre.livre.ecrire(this.nom + " subit une violente attaque, ");
 		
 		if(force >= qteVie) {
 			
 			qteVie = 0;
 			this.mourir();
-			System.out.print("trop violente pour survivre.");
+			EntiteLivre.livre.ecrire("trop violente pour survivre.");
 			
 		}else {
 			
 			qteVie -= force;
-			System.out.print(" mais il parvient à ce relever.");
+			EntiteLivre.livre.ecrire(" mais il parvient à ce relever.");
 			
 		}
 		
 	}
 	
-	protected void mourir() {
-	}
+	abstract public void mourir() ;
 	
 	public void rejointBataille(Bataille bataille) {
 		this.bataille = bataille;

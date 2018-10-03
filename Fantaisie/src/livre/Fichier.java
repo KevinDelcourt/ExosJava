@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class Fichier /*implements Livre*/ {
+public class Fichier implements Livre {
 	
 	public Fichier() {
 		File f = new File("./histoire.txt"); 

@@ -3,6 +3,7 @@ package livre;
 import jeuRole.Arc;
 import jeuRole.Bataille;
 import jeuRole.Dragon;
+import jeuRole.EntiteLivre;
 //import jeuRole.EntiteLivre;
 import jeuRole.Epee;
 import jeuRole.Heros;
@@ -14,9 +15,9 @@ public class MonHistoire {
 	public static void main(String[] args) {
 
 		
-//		Livre livre = new Ecran();
-//		Livre livre = new Fichier();
-//		EntiteLivre.affecterLivre(livre);
+		Livre livre = new Ecran();
+		//Livre livre = new Fichier();
+		EntiteLivre.setLivre(livre);
 
 		Bataille bataille = new Bataille();
 
@@ -32,6 +33,12 @@ public class MonHistoire {
 		dragonet.rejointBataille(bataille);
 		thomas.rejointBataille(bataille);
 		arthur.rejointBataille(bataille);
+		
+		transperce.prendre(arthur);
+		transperce.attaque(dragonet);
+		transperce.attaque(dragonet);
+		transperce.attaque(dragonet);
+		transperce.attaque(dragonet);
 		
 //		arthur.prendre(excalibur);
 //		arthur.combattre(dragonet);
