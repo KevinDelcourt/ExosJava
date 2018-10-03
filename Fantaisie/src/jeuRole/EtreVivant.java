@@ -28,7 +28,7 @@ public abstract class EtreVivant extends EntiteLivre {
 		}else {
 			
 			qteVie -= force;
-			EntiteLivre.livre.ecrire(" mais il parvient à ce relever.");
+			livre.ecrire(" mais il parvient à ce relever.");
 			
 		}
 		

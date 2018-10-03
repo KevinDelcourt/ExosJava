@@ -1,6 +1,6 @@
 package jeuRole;
 
-abstract class Arme {
+abstract class Arme extends EntiteLivre {
 	
 	private Homme proprietaire;
 	private String nature;

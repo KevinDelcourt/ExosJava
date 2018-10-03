@@ -2,7 +2,7 @@ package jeuRole;
 
 import livre.Livre;
 
-public class EntiteLivre {
+public abstract class EntiteLivre {
 	
 	static Livre livre;
 
