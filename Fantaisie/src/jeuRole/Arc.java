@@ -19,7 +19,11 @@ public class Arc extends Arme {
 			EntiteLivre.livre.ecrire("Malheureusement, " + getProprietaire().getNom() + " ne possaidait plus de fleches.\n");
 		}
 		
-		
-		
 	}
+
+	public int getNbrFleche() {
+		return nbrFleche;
+	}
+
+	
 }

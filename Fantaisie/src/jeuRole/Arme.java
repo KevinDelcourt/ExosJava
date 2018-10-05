@@ -1,6 +1,6 @@
 package jeuRole;
 
-abstract class Arme extends EntiteLivre {
+public abstract class Arme extends EntiteLivre {
 	
 	private Homme proprietaire;
 	private String nature;
@@ -32,7 +32,7 @@ abstract class Arme extends EntiteLivre {
 	}
 	
 	public void attaque(Dragon dragon) {
-		livre.ecrire(proprietaire.getNom() + " attaque " + dragon.getNom() + " avec son " + nature + "\n");
+		livre.ecrire(proprietaire.getNom() + " attaque " + dragon.getNom() + " avec son " + nature + ".\n");
 		dragon.subirAttaque(degats);
 	}
 }

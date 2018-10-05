@@ -78,4 +78,14 @@ public class Homme extends EtreVivant {
 			maPossetion.attaque(dragon); 
 		}
 	}
+
+	public Arme getMaPossetion() {
+		return maPossetion;
+	}
+	
+	public boolean aUneArme() {
+		return maPossetion != null;
+	}
+
+	
 }

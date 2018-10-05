@@ -1,5 +1,6 @@
 package jeuRole;
 
+import livre.Fichier;
 import livre.Livre;
 
 public abstract class EntiteLivre {
@@ -9,6 +10,7 @@ public abstract class EntiteLivre {
 	public static void setLivre(Livre livre) {
 		EntiteLivre.livre = livre;
 	}
+
 	
 
 }

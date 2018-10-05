@@ -14,7 +14,6 @@ public class Fichier implements Livre {
 		try {
 			texte = texte.replaceAll("\n", System.lineSeparator());
 			
-			
 			File f = new File("./histoire.txt");
 			f.createNewFile();
 			

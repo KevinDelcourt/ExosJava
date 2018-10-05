@@ -11,7 +11,7 @@ public abstract class EtreVivant extends EntiteLivre {
 		this.qteVie = qteVie;
 	}
 	
-	protected String getNom() {
+	public String getNom() {
 		return nom;
 	}
 	
@@ -38,5 +38,9 @@ public abstract class EtreVivant extends EntiteLivre {
 	
 	public void rejointBataille(Bataille bataille) {
 		this.bataille = bataille;
+	}
+	
+	public boolean isMort() {
+		return qteVie <= 0;
 	}
 }

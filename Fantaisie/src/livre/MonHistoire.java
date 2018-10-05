@@ -1,5 +1,6 @@
 package livre;
 
+import graphique.LivreFrame;
 import jeuRole.Arc;
 import jeuRole.Bataille;
 import jeuRole.Dragon;
@@ -13,11 +14,11 @@ import jeuRole.LancePierre;
 public class MonHistoire {
 
 	public static void main(String[] args) {
-
 		
-		//Livre livre = new Ecran();
-		Livre livre = new Fichier();
-		EntiteLivre.setLivre(livre);
+		Livre livre = new Ecran();
+		//Livre livre = new Fichier();
+		LivreFrame frame = new LivreFrame();
+		/*EntiteLivre.setLivre(livre);
 
 		Bataille bataille = new Bataille();
 
@@ -54,7 +55,7 @@ public class MonHistoire {
 		dragonet.cracheBouleFeu(arthur);
 		thomas.combattre(dragonet);
 		thomas.combattre(dragonet);
-		thomas.combattre(dragonet);
+		thomas.combattre(dragonet);*/
 
 		}
 }
