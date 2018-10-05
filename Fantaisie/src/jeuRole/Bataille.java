@@ -10,7 +10,7 @@ public class Bataille extends EntiteLivre{
 		campHomme.ajouterEtreVivant(homme);
 		if (campHomme.nbCompagnon() > 1) {
 			homme.parler("Bonjour, je m'appelle " + homme.getNom()
-					+ " et je viens me joindre au combat.\n");
+					+ " et je viens me joindre au combat.");
 		} else 
 			EntiteLivre.livre.ecrire("\n"+ homme.getNom() + " est le premier à se joindre à la dernière bataille entre les Hommes et les dragons\n");
 		
@@ -21,10 +21,10 @@ public class Bataille extends EntiteLivre{
 		campDragon.ajouterEtreVivant(dragon);
 		if (campDragon.nbCompagnon() > 1) {
 			EntiteLivre.livre.ecrire("\nUn nouveau dragon " + dragon.getNom()
-					+ " s'approchait du champ de bataille\n");
+					+ " s'approchait du champ de bataille");
 		} else
 			EntiteLivre.livre.ecrire("\nLe dragon " + dragon.getNom()
-					+ " fut le premier à arriver sur le champ de bataille.\n");
+					+ " fut le premier à arriver sur le champ de bataille.");
 	}
 
 	public void eliminer(Dragon dragon) {

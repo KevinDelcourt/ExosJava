@@ -18,21 +18,22 @@ public class Dragon extends EtreVivant {
 	@Override
 	public void mourir() {
 		
+		
+		EntiteLivre.livre.ecrire("C'est ainsi que le dragon "+ getNom() + " mourut.\n");
 		bataille.eliminer(this);
-		EntiteLivre.livre.ecrire("C'est ainsi que le dragon "+ getNom() + " mourut.");
 	}
 	
 	public void cracheBouleFeu(Homme homme) {
 		
 		if(nbBoules >= 0) {
-			homme.subirAttaque(100);
-			
-			EntiteLivre.livre.ecrire(getNom() + " crache une boule de feu sur " + homme.getNom());
+			EntiteLivre.livre.ecrire(getNom() + " crache une boule de feu sur " + homme.getNom() + ".\n");
 			
 			nbBoules--;
+			
+			homme.subirAttaque(100);
 		}else {
 			
-			EntiteLivre.livre.ecrire(getNom() + " ne pouvait plus cracher de boules de feu! " + homme.getNom() + " a eu beaucoup de chances.");
+			EntiteLivre.livre.ecrire(getNom() + " ne pouvait plus cracher de boules de feu! " + homme.getNom() + " a eu beaucoup de chances.\n");
 		}
 		
 	}

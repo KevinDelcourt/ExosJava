@@ -16,7 +16,7 @@ public class Arc extends Arme {
 			super.attaque(dragon);
 			nbrFleche--;
 		}else {
-			EntiteLivre.livre.ecrire("Malheureusement, " + getProprietaire().getNom() + " ne possaidait plus de fleches.");
+			EntiteLivre.livre.ecrire("Malheureusement, " + getProprietaire().getNom() + " ne possaidait plus de fleches.\n");
 		}
 		
 		

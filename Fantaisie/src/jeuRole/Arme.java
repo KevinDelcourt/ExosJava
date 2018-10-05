@@ -32,7 +32,7 @@ abstract class Arme extends EntiteLivre {
 	}
 	
 	public void attaque(Dragon dragon) {
-		EntiteLivre.livre.ecrire(proprietaire.getNom() + " attaque " + dragon.getNom() + " avec son " + nature + "\n");
+		livre.ecrire(proprietaire.getNom() + " attaque " + dragon.getNom() + " avec son " + nature + "\n");
 		dragon.subirAttaque(degats);
 	}
 }

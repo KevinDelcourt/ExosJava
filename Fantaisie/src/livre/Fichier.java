@@ -12,9 +12,15 @@ public class Fichier implements Livre {
 	}
 	public void ecrire(String texte) {
 		try {
+			texte = texte.replaceAll("\n", System.lineSeparator());
+			
+			
 			File f = new File("./histoire.txt");
 			f.createNewFile();
+			
 			FileWriter fw = new FileWriter(f,true);
+			
+			
 			fw.write(texte);
 			fw.flush();
 			fw.close();

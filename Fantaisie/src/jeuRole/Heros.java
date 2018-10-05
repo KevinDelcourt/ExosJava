@@ -13,4 +13,9 @@ public class Heros extends Homme {
 		EntiteLivre.livre.ecrire("Le héros ");
 		super.parler(texte);
 	}
+	
+	@Override
+	public void prendreEpee(Epee epee) {
+		this.parler("Je prends " + epee.getNom());
+	}
 }

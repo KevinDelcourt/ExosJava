@@ -4,7 +4,7 @@ public class TennisGame {
 	private int scorePlayer1;  
 	private int scorePlayer2;    
 	
-	public static final String tabScores[] = {"love","fifteen", "thirty", "forty"};
+	public static final String tabScores[] = {"Love","Fifteen", "Thirty", "Forty"};
 	
 	public TennisGame() {   
 		this.scorePlayer1 = 0;   this.scorePlayer2 = 0;  
@@ -14,35 +14,40 @@ public class TennisGame {
 		
 		if (this.player1Won()) { 
 			
-			return "game for player1";   
+			return "Win for player1";   
 		}
 		
 		if (this.player2Won()) {   
 			
-			return "game for player2";  
+			return "Win for player2";  
 		
 		}   
 		
 		if (this.gameThatLastsALongTime()) { 
 			
 			return this.DeuceOrAdvantage();   
-		}   
+		}
+		
+		if(this.scorePlayer1 == this.scorePlayer2) {
+			//Cas égalité mais pas deuce
+			return tabScores[this.scorePlayer1] + "-All";
+		}
 	
-		return tabScores[this.scorePlayer1] + " - " + tabScores[this.scorePlayer2];  
+		return tabScores[this.scorePlayer1] + "-" + tabScores[this.scorePlayer2];  
 	
 	}    
 	
 	private String DeuceOrAdvantage() {  
 		
 		if (this.scorePlayer1 == this.scorePlayer2) {    
-			return "deuce";   
+			return "Deuce";   
 		}  
 		
 		if (this.scorePlayer1 > this.scorePlayer2) {    
-			return ("advantage for player1");   
+			return ("Advantage player1");   
 		}   
 		
-		return ("advantage for player2");  
+		return ("Advantage player2");  
 		
 	} 
 	 

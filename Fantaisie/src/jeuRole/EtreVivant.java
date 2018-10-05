@@ -17,18 +17,18 @@ public abstract class EtreVivant extends EntiteLivre {
 	
 	protected void subirAttaque(int force) {
 		
-		EntiteLivre.livre.ecrire(this.nom + " subit une violente attaque, ");
+		livre.ecrire(this.nom + " subit une violente attaque, ");
 		
 		if(force >= qteVie) {
 			
 			qteVie = 0;
+			livre.ecrire("trop violente pour survivre.\n");
 			this.mourir();
-			EntiteLivre.livre.ecrire("trop violente pour survivre.");
 			
 		}else {
 			
 			qteVie -= force;
-			livre.ecrire(" mais il parvient à ce relever.");
+			livre.ecrire("mais il parvient à ce relever.\n");
 			
 		}
 		
