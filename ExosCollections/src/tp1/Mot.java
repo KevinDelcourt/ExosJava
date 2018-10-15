@@ -22,7 +22,12 @@ public class Mot {
 	public String getMot() {
 		return mot;
 	}
+	
+	public String toString() {
+		return mot + " (" + countMot +")";
+	}
 
+	//Obligé pour les collections
 	@Override
 	public boolean equals(Object o) {
 		
@@ -33,5 +38,11 @@ public class Mot {
 		Mot mot = (Mot)o;
 		
 		return mot.getMot().equals(this.getMot());
+	}
+	
+	//Obligé d'override hashcode pour en faire une clé dans un objet hashcode.
+	public int hashCode() {
+		
+		return mot.length();
 	}
 }
