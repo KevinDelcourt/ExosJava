@@ -3,6 +3,10 @@ package primitiveLanguage;
 
 import java.text.Normalizer;
 
+/** Enumeration des différents noms des bâteaux
+ * @author dlk1560a
+ *
+ */
 public enum EnumNomBateau {
 	PORTE_AVION("porte avion"), CROISEUR("croiseur"), SOUS_MARIN("sous-marin"), CONTRE_TORPILLEUR(
 			"contre torpilleur"), TORPILLEUR("torpilleur");
