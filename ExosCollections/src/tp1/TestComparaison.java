@@ -9,7 +9,7 @@ public class TestComparaison {
 	private LinkedList<Point> list = new LinkedList<>();
 	
 	public TestComparaison(int nbPoint) {
-		Random rand = new Random(1);
+		Random rand = new Random();
 		
 		for(int i = 0; i < nbPoint; i++)
 			list.add( new Point( rand.nextInt(100), rand.nextInt(100) ) );
@@ -20,7 +20,7 @@ public class TestComparaison {
 	}
 	
 	public void max() {
-		System.out.println( Collections.max(list) ) ;
+		System.out.println("Max :" + Collections.max(list) ) ;
 	}
 	
 	public static void main(String[] args) {

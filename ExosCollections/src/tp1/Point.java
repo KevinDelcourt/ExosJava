@@ -26,7 +26,7 @@ public class Point implements Comparable<Point> {
 	@Override
 	public int compareTo(Point arg0) {
 		
-		return this.x - arg0.getX();
+		return this.y - arg0.getY();
 	}
 
 }

@@ -1,17 +1,11 @@
 package tp1;
 
-import java.util.Collection;
-import java.util.Collections;
 import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.ListIterator;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class TestLinkedList {
 	
 	private ConcurrentLinkedQueue<Integer> linkedlist = new ConcurrentLinkedQueue<Integer>();
-	
-	
 	
 	
 	public TestLinkedList(int n) {
