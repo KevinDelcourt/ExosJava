@@ -23,5 +23,10 @@ public class ConspirationTest {
 	public void testChaineVide() {
 		assertEquals("",conspiration.tri(""));
 	}
+	
+	@Test
+	public void testQueDesLettresa () {
+		assertEquals("aaa",conspiration.tri("aAA"));
+	}
 
 }
