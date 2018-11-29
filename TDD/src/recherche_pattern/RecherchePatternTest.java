@@ -70,10 +70,9 @@ public class RecherchePatternTest {
 	{
 		assertFalse(recherchePattern.equals(pattern,phrase,30));
 		assertFalse(recherchePattern.equals(pattern,phrase,32));
-		assertFalse(recherchePattern.equals(pattern,phrase,25));
+		assertFalse(recherchePattern.equals(pattern,phrase,26));
 		assertFalse(recherchePattern.equals(pattern,phrase,2));
 		assertFalse(recherchePattern.equals(pattern,phrase,-2));
-		
 		assertTrue(recherchePattern.equals(pattern,phrase,31));
 	}
 	
