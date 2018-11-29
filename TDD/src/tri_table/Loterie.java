@@ -4,7 +4,10 @@ public class Loterie {
 
 	public String tirage(int[] boules) {
 		
-		return "";
+		if(boules == null)
+			return "";
+					
+		return ""+boules[0];
 	}
 
 	
