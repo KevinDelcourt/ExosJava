@@ -8,20 +8,22 @@ public class Loterie {
 			return "";
 		
 		triBoules(boules);
-		
 		return affichageBoules(boules);
 	}
 
 	private void triBoules(int[] boules) {
-		
-		for(int i = 0; i < boules.length-1; i++) {
-			if(boules[i] > boules[i+1]) {
-				int n = boules[i];
-				boules[i] = boules[i+1];
-				boules[i+1] = n;
-			}
-		}
-		
+		boolean tableauTrié;
+		do {
+			tableauTrié = true;
+			for(int i = 0; i < boules.length-1; i++) 
+				if(boules[i] > boules[i+1]) {
+					tableauTrié = false;
+					int n = boules[i];
+					boules[i] = boules[i+1];
+					boules[i+1] = n;
+				}
+			
+		}while(!tableauTrié);
 	}
 
 	private String affichageBoules(int[] boules) {

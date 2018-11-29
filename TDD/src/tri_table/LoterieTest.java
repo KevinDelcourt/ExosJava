@@ -49,9 +49,9 @@ public class LoterieTest {
 		assertEquals("12 17",loterie.tirage(boules) );
 	}
 	
-	/*@Test
+	@Test
 	public void testAcceptation() {
 		int[] boules = {0, 30, 20, 40, 5, 3};
 		assertEquals("0 3 5 20 30 40",loterie.tirage(boules) );
-	}*/
+	}
 }
