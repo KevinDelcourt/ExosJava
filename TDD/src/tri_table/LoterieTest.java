@@ -36,4 +36,10 @@ public class LoterieTest {
 		int[] boules = {10,20};
 		assertEquals("10 20",loterie.tirage(boules) );
 	}
+	
+	@Test
+	public void testTroisBoulesTirees() {
+		int[] boules = {10,20,30};
+		assertEquals("10 20 30",loterie.tirage(boules) );
+	}
 }
