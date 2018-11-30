@@ -28,5 +28,10 @@ public class ConspirationTest {
 	public void testQueDesLettresa () {
 		assertEquals("aaa",conspiration.tri("aAA"));
 	}
+	
+	@Test
+	public void testAvecDesaEtAutreschosesQueDesCaracteres () {
+		assertEquals("aaa",conspiration.tri("...aAA!!!!!?"));
+	}
 
 }
