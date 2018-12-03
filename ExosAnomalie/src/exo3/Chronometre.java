@@ -14,14 +14,14 @@ public class Chronometre {
 
 	public void compteARebours() {
 		try {
-//			System.out.println(this);
-//			this.decompterUneSeconde();
-//			this.compteARebours();
+			System.out.println(this);
+			this.decompterUneSeconde();
+			this.compteARebours();
 			
-			do {
-				System.out.println(this);
-				this.decompterUneSeconde();
-			}while(true);
+//			do {
+//				System.out.println(this);
+//				this.decompterUneSeconde();
+//			}while(true);
 
 		}
 		catch (Exception e) {
@@ -33,28 +33,22 @@ public class Chronometre {
 		try {
 			this.secondes.moinsUn();
 		}catch (ConstraintError e) {
-			deroutementSecondes();
+			try {
+
+				this.minutes.moinsUn();
+				this.secondes.setValeur(59);
+			}catch (ConstraintError e1) {
+				try {
+					this.heures.moinsUn();
+					this.secondes.setValeur(59);
+					this.minutes.setValeur(59);
+				}catch (ConstraintError e2) {
+					throw new Exception();//Fin du chronometre
+				}
+			}
 		}
 	}
 	
-	private void deroutementSecondes() throws Exception {
-		this.secondes.setValeur(59);
-		try {
-			this.minutes.moinsUn();
-		}catch (ConstraintError e) {
-			deroutementMinutes();
-		}
-	}
-	
-	private void deroutementMinutes() throws Exception {
-		this.minutes.setValeur(59);
-		try {
-			this.heures.moinsUn();
-		}catch (ConstraintError e) {
-			System.out.println(this);
-			throw new Exception();//Fin du chronometre
-		}
-	}
 
 
 	public String toString() {
