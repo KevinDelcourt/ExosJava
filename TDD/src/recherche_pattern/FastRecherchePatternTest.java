@@ -84,7 +84,8 @@ public class FastRecherchePatternTest {
 	}
 	
 	@Test
-	public void performanceTestEquals() {
+	public void performanceTestEquals() 
+	{
 		//Ne peux passer que si les comparaisons commencent à droite
 		assertFalse(fastRecherchePattern.equals(pattern,phrase,24));
 		assertEquals(1,fastRecherchePattern.getCompteur());
@@ -95,10 +96,7 @@ public class FastRecherchePatternTest {
 	{
 		int[] expectedResult = new int[28];
 		int[] result = fastRecherchePattern.buildDelta1("");
-		assertEquals(expectedResult[0],result[0]);
-		assertEquals(expectedResult[8],result[8]);
-		assertEquals(expectedResult[15],result[15]);
-		assertEquals(expectedResult[23],result[23]);
+		assertArrayEquals(expectedResult,result);
 	}
 	
 	@Test
@@ -106,11 +104,17 @@ public class FastRecherchePatternTest {
 	{
 		int[] expectedResult = {2,7,7,7,7,7,7,3,7,7,7,7,7,7,7,7,7,7,7,1,7,7,7,7,7,7,7,5};
 		int[] result = fastRecherchePattern.buildDelta1(pattern);
-		assertEquals(expectedResult[0],result[0]);
-		assertEquals(expectedResult[7],result[7]);
-		assertEquals(expectedResult[15],result[15]);
-		assertEquals(expectedResult[19],result[19]);
-		assertEquals(expectedResult[27],result[27]);
+		assertArrayEquals(expectedResult,result);
+	}
+	
+	@Test
+	public void testDelta2()
+	{
+		int[] expectedResult1 = {14,13,12,11,10,9,11,10,1};
+		int[] result1 = fastRecherchePattern.buildDelta2("ABCXXXABC");
+		assertArrayEquals(expectedResult1,result1);
+		//int[] expectedResult2 = {17,16,15,14,13,12,1,10,1};
+		//int[] result2 = fastRecherchePattern.buildDelta2("ABYXCDEYX");
 	}
 	
 }
