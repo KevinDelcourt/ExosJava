@@ -113,8 +113,10 @@ public class FastRecherchePatternTest {
 		int[] expectedResult1 = {14,13,12,11,10,9,11,10,1};
 		int[] result1 = fastRecherchePattern.buildDelta2("ABCXXXABC");
 		assertArrayEquals(expectedResult1,result1);
-		//int[] expectedResult2 = {17,16,15,14,13,12,1,10,1};
-		//int[] result2 = fastRecherchePattern.buildDelta2("ABYXCDEYX");
+		
+		int[] expectedResult2 = {17,16,15,14,13,12,7,10,1};
+		int[] result2 = fastRecherchePattern.buildDelta2("ABYXCDEYX");
+		assertArrayEquals(expectedResult2,result2);
 	}
 	
 }

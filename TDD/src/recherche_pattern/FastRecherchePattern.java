@@ -18,7 +18,8 @@ public class FastRecherchePattern extends RecherchePattern {
 		return true;
 	}
 
-	public int[] buildDelta1(String pattern) {
+	public int[] buildDelta1(String pattern) 
+	{
 		int[] delta1 = new int[28];//Toutes les lettres de l'alphabet + '.' + '-'
 		
 		for(int i = 0; i < 28; i++) 
@@ -38,30 +39,32 @@ public class FastRecherchePattern extends RecherchePattern {
 		return delta1;
 	}
 
-	public int[] buildDelta2(String pattern) {
+	public int[] buildDelta2(String pattern) 
+	{
 		int[] delta2 = new int[pattern.length()];
 		
-		for(int j = 0; j < pattern.length(); j++) {
+		for(int j = 0; j < pattern.length()-1; j++) {
 			int k;
-			for(k = pattern.length() - 1; 
+			for(k = pattern.length() - 3; 
 				!unify(pattern,k,j) || (k>=1 && pattern.charAt(k-1) == pattern.charAt(j)); 
 				k--) {}
 			delta2[j] = pattern.length() - k ;
 		}
-		
+		delta2[pattern.length()-1] = 1;
 		return delta2;
 	}
 	
-	//Est-ce que le sous-pattern de j+1 à la fin et le sous-pattern
-	private boolean unify(String pattern, int k, int j) {
+	//Est-ce que le sous-pattern de j+1 à la fin et le sous-pattern de même longueur partant de k sont égaux sans compter les dépassement
+	private boolean unify(String pattern, int k, int j) 
+	{
 		
 		boolean unify = true;
 		for(int x = 0; x < pattern.length() - j - 1 ; x++) {
 			try {
 				unify = unify && pattern.charAt(x+j+1) == pattern.charAt(x+k);
-			}catch(StringIndexOutOfBoundsException e) {}
+			}catch(StringIndexOutOfBoundsException e) {	}
 		}
-		
+			
 		return unify;
 	}
 }
