@@ -101,6 +101,17 @@ public class FastRecherchePatternTest {
 		assertEquals(expectedResult[23],result[23]);
 	}
 	
+	@Test
+	public void testDelta1Pattern()
+	{
+		int[] expectedResult = {2,7,7,7,7,7,7,3,7,7,7,7,7,7,7,7,7,7,7,1,7,7,7,7,7,7,7,5};
+		int[] result = fastRecherchePattern.buildDelta1(pattern);
+		assertEquals(expectedResult[0],result[0]);
+		assertEquals(expectedResult[7],result[7]);
+		assertEquals(expectedResult[15],result[15]);
+		assertEquals(expectedResult[19],result[19]);
+		assertEquals(expectedResult[27],result[27]);
+	}
 	
 }
 

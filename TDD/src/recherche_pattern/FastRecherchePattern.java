@@ -21,8 +21,19 @@ public class FastRecherchePattern extends RecherchePattern {
 	public int[] buildDelta1(String pattern) {
 		int[] delta1 = new int[28];//Toutes les lettres de l'alphabet + '.' + '-'
 		
-		for(int i = 0; i < 28; i++) {
-			delta1[i] = 0;
+		for(int i = 0; i < 28; i++) 
+			delta1[i] = pattern.length();
+		
+		for(int i = 0; i < pattern.length(); i++) {
+			int rangChar;
+			if(pattern.charAt(i) == '-')
+				rangChar = 27;
+			else if(pattern.charAt(i) == '.')
+				rangChar = 26;
+			else {
+				rangChar = (int)pattern.charAt(i)- 65;
+			}
+			delta1[rangChar] = pattern.length()-i;
 		}
 		return delta1;
 	}
