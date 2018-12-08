@@ -2,7 +2,7 @@ package recherche_pattern;
 
 public class RecherchePattern {
 
-	private int compteur = 0;
+	private int _compteur = 0;
 	
 	public boolean equals(String pattern, String phrase, int position)
 	{
@@ -13,7 +13,7 @@ public class RecherchePattern {
 			return false;
 		
 		for(int i = 0; i < pattern.length(); i++) {
-			compteur++;
+			_compteur++;
 			if( pattern.charAt(i) != phrase.charAt(debutPattern+i) )
 				return false;
 		}
@@ -23,9 +23,8 @@ public class RecherchePattern {
 
 	public int searchPattern(String pattern, String phrase) 
 	{
-		compteur = 0;
+		_compteur = 0;
 		for(int i = 0; i < phrase.length(); i++) {
-			compteur++;
 			if( this.equals(pattern, phrase, i) ) 
 				return i;
 		}
@@ -34,7 +33,7 @@ public class RecherchePattern {
 	
 	public int getCompteur() 
 	{
-		return compteur;
+		return _compteur;
 	}
 	
 }
