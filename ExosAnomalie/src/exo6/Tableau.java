@@ -23,15 +23,26 @@ public class Tableau {
 		System.out.println("valeur du marqueur de fin :");
 		marqueur = sc.nextInt();
 		
-
+		System.out.println("Entrez des valeur ou le marqueur de fin: ");
+		valeur = sc.nextInt();
+		while(valeur != marqueur && this.n < this.tab.length){
+			this.ajouterValeur(valeur);
+			valeur = sc.nextInt(); 
+		}
+		
+		while(valeur != marqueur) 
+			valeur = sc.nextInt();
+		
 	}
 	
 	// insere la valeur v dans le tableau tab au rang n
-	// nécessite que 0 <= this.n <= this.tab.length -1
 	// entraine this.n' == this.n + 1 et this.tab'[this.n] == v
 	private void ajouterValeur(int v) {
-		tab[n] = v;
-		n++;
+		assert 0 <= this.n && this.n < this.tab.length:"Débordement du tableau:";//Activer assert dans les prefs d'eclipse
+		
+		this.tab[n] = v;
+		this.n++;
+		
 	}
 	
 	

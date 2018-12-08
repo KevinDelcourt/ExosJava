@@ -2,7 +2,7 @@ package recherche_pattern;
 
 public class RecherchePattern {
 
-	private int _compteur = 0;
+	protected int _compteur = 0;
 	
 	public boolean equals(String pattern, String phrase, int position)
 	{
