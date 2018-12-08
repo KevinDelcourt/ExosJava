@@ -2,17 +2,52 @@ package recherche_pattern;
 
 public class FastRecherchePattern extends RecherchePattern {
 
-	public boolean equals(String pattern, String phrase, int position)
+	private int[] _delta1;
+	private int[] _delta2;
+	private int i;
+	public int searchPattern(String pattern, String phrase) 
 	{
-		int debutPattern = position - pattern.length() + 1;
-		
-		if( debutPattern < 0 || position >= phrase.length() ) 
+		_delta1 = buildDelta1(pattern);
+		_delta2 = buildDelta2(pattern);		
+		_compteur = 0;
+		for(i = pattern.length()-1; i < phrase.length();) {
+
+			if( this.equals(pattern, phrase) ) 
+				return i+pattern.length();
+		}
+		return -1;
+	}
+	
+	public boolean equals(String pattern, String phrase)
+	{
+		int debutPattern = i - pattern.length() + 1;
+		if( debutPattern < 0 || i >= phrase.length() ) 
 			return false;
 		
-		for(int i = pattern.length()-1; i >= 0; i--) {
+		for(int j = pattern.length()-1; j >= 0; i--, j--) {
 			_compteur++;
-			if( pattern.charAt(i) != phrase.charAt(debutPattern+i) )
+			if( pattern.charAt(j) != phrase.charAt(i) ) {	
+				
+				i += Math.max( _delta1[charCodeDelta1(phrase.charAt(i))], _delta2[j]);
 				return false;
+			}
+				
+		}
+			
+		return true;
+	}
+	
+	public boolean equals(String pattern, String phrase, int i)
+	{
+		int debutPattern = i - pattern.length() + 1;
+		if( debutPattern < 0 || i >= phrase.length() ) 
+			return false;
+		
+		for(int j = pattern.length()-1; j >= 0; i--, j--) {
+			_compteur++;
+			if( pattern.charAt(j) != phrase.charAt(i) ) 
+				return false;
+				
 		}
 			
 		return true;
@@ -32,9 +67,9 @@ public class FastRecherchePattern extends RecherchePattern {
 			else if(pattern.charAt(i) == '.')
 				rangChar = 26;
 			else {
-				rangChar = (int)pattern.charAt(i)- 65;
+				rangChar = ((int)pattern.charAt(i))- 65;
 			}
-			delta1[rangChar] = pattern.length()-i;
+			delta1[rangChar] = pattern.length()-i-1;
 		}
 		return delta1;
 	}
@@ -66,5 +101,21 @@ public class FastRecherchePattern extends RecherchePattern {
 		}
 			
 		return unify;
+	}
+	
+	private void buildDeltasIfNull(String pattern) {
+		if(_delta1 == null)
+			_delta1 = buildDelta1(pattern);
+		if(_delta2 == null)
+			_delta2 = buildDelta2(pattern);
+	}
+	
+	private int charCodeDelta1(char c) {
+		if(c == '-')
+			return 27;
+		if(c == '.')
+			return 26;
+		
+		return ((int)c) - 65;
 	}
 }
