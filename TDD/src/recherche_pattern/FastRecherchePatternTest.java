@@ -89,5 +89,18 @@ public class FastRecherchePatternTest {
 		assertFalse(fastRecherchePattern.equals(pattern,phrase,24));
 		assertEquals(1,fastRecherchePattern.getCompteur());
 	}
+	
+	@Test
+	public void testDelta1EmptyPattern()
+	{
+		int[] expectedResult = new int[28];
+		int[] result = fastRecherchePattern.buildDelta1("");
+		assertEquals(expectedResult[0],result[0]);
+		assertEquals(expectedResult[8],result[8]);
+		assertEquals(expectedResult[15],result[15]);
+		assertEquals(expectedResult[23],result[23]);
+	}
+	
+	
 }
 
