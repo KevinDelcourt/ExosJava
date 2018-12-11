@@ -20,8 +20,7 @@ public class Main {
 		System.out.println("montant du coffre-fort : " + cf.getMontant());
 		System.out.println("montant du retrait :");
 		v = sc.nextInt();
-		while (v != marqueur) {
-			cf.retirer(v);
+		while (v != marqueur && cf.retirer(v)) {
 			System.out.println("montant du coffre-fort : " + cf.getMontant());
 			System.out.println("montant du retrait :");
 			v = sc.nextInt();	

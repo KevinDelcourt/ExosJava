@@ -20,8 +20,12 @@ public class CoffreFort {
 	}
 
 	// retire une valeur v du coffre-fort
-	public void retirer(int v) {
+	public boolean retirer(int v) {
+		if(this.montant < v)
+			return false;
+		
 		this.montant -= v;
+		return true;
 	}
 	
 	// vide le contenu du coffre-fort
