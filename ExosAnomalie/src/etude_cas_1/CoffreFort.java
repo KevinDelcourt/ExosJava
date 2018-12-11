@@ -19,7 +19,7 @@ public class CoffreFort {
 		this.montant += v;
 	}
 
-	// retire une valeur v du coffre-fort
+	//retire une valeur v du coffre-fort
 	public void retirer(int v) throws RetraitImpossible{
 		if(v > this.montant)
 			throw new RetraitImpossible();

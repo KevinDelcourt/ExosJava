@@ -10,7 +10,7 @@ public class Main {
 		effectuerRetraits(cf);
 	}
 	
-	// effectue les retraits correspondants à la suite v0 v1 v2 ... vn v0
+	//effectue les retraits correspondants à la suite v0 v1 v2 ... vn v0
 	private static void effectuerRetraits(CoffreFort cf) {
 		int marqueur;
 		int v;
