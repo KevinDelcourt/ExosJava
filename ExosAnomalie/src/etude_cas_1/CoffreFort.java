@@ -20,6 +20,7 @@ public class CoffreFort {
 	}
 
 	// retire une valeur v du coffre-fort
+	//nécessite
 	public boolean retirer(int v) {
 		if(this.montant < v)
 			return false;

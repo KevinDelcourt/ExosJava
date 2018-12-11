@@ -21,13 +21,12 @@ public class Main {
 		System.out.println("montant du retrait :");
 		v = sc.nextInt();
 		while (v != marqueur ) {
-			if(cf.retirer(v)) {
-				System.out.println("montant du coffre-fort : " + cf.getMontant());
-				System.out.println("montant du retrait :");
-				v = sc.nextInt();
-			}
+			if(cf.retirer(v)) 
+				System.out.println("montant du coffre-fort : " + cf.getMontant());	
 			else
 				System.out.println("Retrait impossible");
+			System.out.println("montant du retrait :");
+			v = sc.nextInt();
 				
 		}
 		System.out.println("montant final du coffre-fort : " + cf.getMontant());
