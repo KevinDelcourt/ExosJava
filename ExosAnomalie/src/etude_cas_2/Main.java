@@ -12,28 +12,32 @@ public class Main {
 		   	Scanner sc = new Scanner(System.in);
 		   	System.out.println("Nombre de produits a quai :");
 		   	int nbProduits = sc.nextInt();
-		   	int nb = 0;
-		   	while (nb < nbProduits) {
+		   	int nb = 1;
+		   	while (nb <= nbProduits) {
 		   		System.out.println("Charge du produit :");
 		   		charge = sc.nextInt();
 		   		
-		   		try {
-			   		produit = new Produit(charge);
-		   			conteneur.ajouter(produit);
-		   		}catch(ConteneurPlein cp) {
+		   		produit = new Produit(charge);
+	   			conteneur.ajouter(produit);
+	   			
+	   			if(nb%3 == 0) {
+	   				for(int n = 3; !conteneur.getValide() && n > 0; n--) 
+	   					System.out.println("Un produit " + conteneur.enlever() + " reste à quai");
+	   				
 		   			System.out.println(conteneur);
-		   			cargo.charger(conteneur);
+	   				cargo.charger(conteneur);
 		   			conteneur = new Conteneur();
-			   		produit = new Produit(charge);
-		   			conteneur.ajouter(produit);
-		   		}
+	   			}
+	   			
 		   		nb++;
 		   	}
+		   	
 		   	// charger le dernier conteneur dans le cargo
 		   	if (nbProduits != 0) {
 				System.out.println(conteneur);
 				cargo.charger(conteneur);
 		   	}
+		   			   	
 		   	// afficher le contenu du cargo
 		   	System.out.println(cargo);
 		   	sc.close();

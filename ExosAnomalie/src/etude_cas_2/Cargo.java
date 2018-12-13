@@ -21,5 +21,7 @@ public class Cargo {
 			charge += conteneur.getCharge();
 		return 	"\n" + "Nombre de conteneurs : " + this.chargement.size()
 				+ "\n" + "Charge du cargo : " + charge;
-	}	
+	}
+	
+
 }
