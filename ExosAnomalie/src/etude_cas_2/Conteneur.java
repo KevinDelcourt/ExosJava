@@ -20,10 +20,14 @@ public class Conteneur {
 		return this.charge;
 	}
 	
-	public void ajouter(Produit produit) {
-		assert this.charge + produit.getCharge() <= Conteneur.CHARGE_UTILE : "ajout impossible !";
+	public boolean ajouter(Produit produit) {
+		if(this.charge + produit.getCharge() > Conteneur.CHARGE_UTILE) {
+			return false;
+		}
+		
 		this.charge = this.charge + produit.getCharge();
 		this.contenu.add(produit);
+		return true;
 	}
 
 	public String toString() {

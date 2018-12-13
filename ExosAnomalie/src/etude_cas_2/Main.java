@@ -16,19 +16,16 @@ public class Main {
 		   	while (nb < nbProduits) {
 		   		System.out.println("Charge du produit :");
 		   		charge = sc.nextInt();
-		   		if (conteneur.getCharge() + charge <= Conteneur.CHARGE_UTILE) {
-		   			// ajouter le produit dans le conteneur courant
-		   			produit = new Produit(charge);
-		   			conteneur.ajouter(produit);
-		   		} else {
-		   			// charger le conteneur courant dans le cargo 
-		   			// et passer au conteneur suivant
+		   		
+		   		produit = new Produit(charge);
+		   		if (!conteneur.ajouter(produit)) {
+		   			
 		   			System.out.println(conteneur);
 		   			cargo.charger(conteneur);
 		   			conteneur = new Conteneur();
-		   			produit = new Produit(charge);
 		   			conteneur.ajouter(produit);
-		   		}
+		   			
+		   		} 
 		   		nb++;
 		   	}
 		   	// charger le dernier conteneur dans le cargo
