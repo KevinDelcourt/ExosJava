@@ -20,14 +20,13 @@ public class Conteneur {
 		return this.charge;
 	}
 	
-	public boolean ajouter(Produit produit) {
+	public void ajouter(Produit produit) throws ConteneurPlein{
 		if(this.charge + produit.getCharge() > Conteneur.CHARGE_UTILE) {
-			return false;
+			throw new ConteneurPlein();
 		}
 		
 		this.charge = this.charge + produit.getCharge();
 		this.contenu.add(produit);
-		return true;
 	}
 
 	public String toString() {

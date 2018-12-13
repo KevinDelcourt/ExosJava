@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Main {
 	
-	  public static void main(String[] args) {
+	  public static void main(String[] args) throws ConteneurPlein {
 		   	Cargo cargo = new Cargo();
 		   	Conteneur conteneur = new Conteneur();
 		   	Produit produit;
@@ -17,15 +17,16 @@ public class Main {
 		   		System.out.println("Charge du produit :");
 		   		charge = sc.nextInt();
 		   		
-		   		produit = new Produit(charge);
-		   		if (!conteneur.ajouter(produit)) {
-		   			
+		   		try {
+			   		produit = new Produit(charge);
+		   			conteneur.ajouter(produit);
+		   		}catch(ConteneurPlein cp) {
 		   			System.out.println(conteneur);
 		   			cargo.charger(conteneur);
 		   			conteneur = new Conteneur();
+			   		produit = new Produit(charge);
 		   			conteneur.ajouter(produit);
-		   			
-		   		} 
+		   		}
 		   		nb++;
 		   	}
 		   	// charger le dernier conteneur dans le cargo
