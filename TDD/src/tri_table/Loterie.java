@@ -1,36 +1,19 @@
 package tri_table;
 
-public class Loterie {
+public class Loterie extends TrieurParTable<Integer> {
 
-	private int[] tab;
-	
 	public Loterie() {
-		tab = new int[60];
+		super(60);
 	}
 	
-	public String tirage(int[] boules) {
+	public String tirage(Integer[] boules) {
 		
 		if(boules == null)
 			return "";
-		
-		triBoules(boules);
-		return affichageBoules(boules);
+		return affichageBoules(trier(boules));
 	}
 
-	private void triBoules(int[] boules) {
-		
-		for(int i = 0; i < boules.length; i++) 
-			tab[boules[i]] = 1;
-		
-		for(int n_tab = 0,n_boule = 0; n_tab < tab.length && n_boule < boules.length; n_tab++) 		
-			if(tab[n_tab] == 1) {
-				boules[n_boule] = n_tab;
-				n_boule++;
-			}
-		
-	}
-
-	private String affichageBoules(int[] boules) {
+	private String affichageBoules(Integer[] boules) {
 		
 		String retour = "";
 		for(int i = 0; i < boules.length; i++){
@@ -40,5 +23,15 @@ public class Loterie {
 		}
 		
 		return retour;
+	}
+
+	@Override
+	protected int toInt(Integer elem) {
+		return elem;
+	}
+
+	@Override
+	protected Integer toElem(int i) {
+		return (Integer)i;
 	}
 }

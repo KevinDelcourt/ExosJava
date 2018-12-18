@@ -1,31 +1,28 @@
 package tri_table;
 
-public class Conspiration {
+public class Conspiration extends TrieurParTable<Character> {
 
-	private int[] tab = new int[26];
+	public Conspiration() {
+		super(26);
+	}
 	
 	public String tri(String string) {
 		String chaineNonTriée = enleverToutSaufMinuscule(string.toLowerCase());
+		Character[] charsNonTriés = new Character[chaineNonTriée.length()];
+		for(int i = 0; i < chaineNonTriée.length(); i++) 
+			charsNonTriés[i] = chaineNonTriée.charAt(i);
 		
-		for(int i = 0; i < chaineNonTriée.length();i ++) {
-			int charCode = (int)chaineNonTriée.charAt(i) - (int)'a';
-			tab[charCode]++;
-		}
+		Character[] charsTriés = trier(charsNonTriés);
 		
-		String chaineTriée = "";
+		String ChaineTriée = "";
+		for(int i = 0; i < charsTriés.length; i++) 
+			ChaineTriée += charsTriés[i];
 		
-		for(int i = 0; i < tab.length; i++) {
-			for(int n = 0; n < tab[i];n++)
-				chaineTriée += (char)('a' + i);
-		}
-		
-		return chaineTriée;
+		return ChaineTriée;
 	}
 
 	private boolean estMinuscule(char c) {
-		
-		int charValue = c;
-		return (int)'a' <= charValue && (int)'z' >= charValue;
+		return (int)'a' <= c && (int)'z' >= c;
 	}
 	
 	private String enleverToutSaufMinuscule(String string) {
@@ -36,4 +33,15 @@ public class Conspiration {
 		
 		return resultat;
 	}
+
+	@Override
+	protected int toInt(Character elem) {
+		return (int)elem - (int)'a';
+	}
+
+	@Override
+	protected Character toElem(int i) {
+		return (char)('a' + i);
+	}
+
 }
