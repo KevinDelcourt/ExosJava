@@ -2,6 +2,12 @@ package tri_table;
 
 public class Loterie {
 
+	private int[] tab;
+	
+	public Loterie() {
+		tab = new int[60];
+	}
+	
 	public String tirage(int[] boules) {
 		
 		if(boules == null)
@@ -12,18 +18,16 @@ public class Loterie {
 	}
 
 	private void triBoules(int[] boules) {
-		boolean tableauTrié;
-		do {
-			tableauTrié = true;
-			for(int i = 0; i < boules.length-1; i++) 
-				if(boules[i] > boules[i+1]) {
-					tableauTrié = false;
-					int n = boules[i];
-					boules[i] = boules[i+1];
-					boules[i+1] = n;
-				}
-			
-		}while(!tableauTrié);
+		
+		for(int i = 0; i < boules.length; i++) 
+			tab[boules[i]] = 1;
+		
+		for(int n_tab = 0,n_boule = 0; n_tab < tab.length && n_boule < boules.length; n_tab++) 		
+			if(tab[n_tab] == 1) {
+				boules[n_boule] = n_tab;
+				n_boule++;
+			}
+		
 	}
 
 	private String affichageBoules(int[] boules) {
