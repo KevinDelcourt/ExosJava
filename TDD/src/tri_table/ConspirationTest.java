@@ -31,7 +31,7 @@ public class ConspirationTest {
 	
 	@Test
 	public void testAvecDesaEtAutreChoseQueDesCaracteres () {
-		assertEquals("aaa",conspiration.tri("...aAA!!!!!?"));
+		assertEquals("aaa",conspiration.tri("...aAA!! !!!?"));
 	}
 
 }
