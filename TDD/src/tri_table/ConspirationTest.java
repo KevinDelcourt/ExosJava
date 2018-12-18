@@ -34,4 +34,8 @@ public class ConspirationTest {
 		assertEquals("aaa",conspiration.tri("...aAA!! !!!?"));
 	}
 
+	@Test
+	public void testAcceptation () {
+		assertEquals("ddeeeeeiijlllmnrsstuu",conspiration.tri("Je suis le meilleur en TDD!!!"));
+	}
 }
