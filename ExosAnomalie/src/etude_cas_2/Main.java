@@ -14,28 +14,22 @@ public class Main {
 		   	int nbProduits = sc.nextInt();
 		   	int nb = 1;
 		   	while (nb <= nbProduits) {
-		   		System.out.println("Charge du produit :");
-		   		charge = sc.nextInt();
+		   		for(int n = 0; nb <= nbProduits && n < 3; n++) {
+		   			System.out.println("Charge du produit :");
+			   		charge = sc.nextInt();
+			   		
+			   		produit = new Produit(charge);
+		   			conteneur.ajouter(produit);
+		   			nb++;
+		   		}
 		   		
-		   		produit = new Produit(charge);
-	   			conteneur.ajouter(produit);
-	   			
-	   			if(nb%3 == 0) {
-	   				for(int n = 3; !conteneur.getValide() && n > 0; n--) 
-	   					System.out.println("Un produit " + conteneur.enlever() + " reste à quai");
+		   		for(int n = 0; !conteneur.getValide() && n < 3; n++) 
+   					System.out.println("Un produit " + conteneur.enlever() + " reste à quai");
 	   				
-		   			System.out.println(conteneur);
-	   				cargo.charger(conteneur);
-		   			conteneur = new Conteneur();
-	   			}
+		   		System.out.println(conteneur);
+	   			cargo.charger(conteneur);
+		   		conteneur = new Conteneur();
 	   			
-		   		nb++;
-		   	}
-		   	
-		   	// charger le dernier conteneur dans le cargo
-		   	if (nbProduits != 0) {
-				System.out.println(conteneur);
-				cargo.charger(conteneur);
 		   	}
 		   			   	
 		   	// afficher le contenu du cargo

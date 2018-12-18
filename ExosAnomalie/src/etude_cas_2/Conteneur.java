@@ -23,11 +23,11 @@ public class Conteneur {
 	}
 	
 	public void ajouter(Produit produit){
-		if(this.charge + produit.getCharge() > Conteneur.CHARGE_UTILE) {
-			this.valide = false;
-		}
 		
 		this.charge = this.charge + produit.getCharge();
+
+		this.valide = this.charge <= Conteneur.CHARGE_UTILE;
+		
 		this.contenu.add(produit);
 	}
 
@@ -36,8 +36,7 @@ public class Conteneur {
 		Produit dernierProduit = contenu.remove(contenu.size() - 1);
 		this.charge -= dernierProduit.getCharge();
 		
-		if(this.charge <= Conteneur.CHARGE_UTILE)
-			this.valide = true;
+		this.valide = this.charge <= Conteneur.CHARGE_UTILE;
 		
 		return dernierProduit;
 	}

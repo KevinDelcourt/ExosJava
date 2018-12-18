@@ -22,8 +22,7 @@ public class Jeu {
 				this.deplacerPion(nouvellePosition);
 			} catch (Exception e) {
 				 System.out.print("Nouvel essai : ");
-			}
-        	
+			}        	
 		}
     }
 

@@ -123,7 +123,7 @@ public class FastRecherchePatternTest {
 	public void performanceTestAcceptation()
 	{
 		String phrase = "WHICH-FINALLY-HALTS.--AT-THAT-POINT";
-		fastRecherchePattern.searchPattern(pattern, phrase); 
+		assertEquals(28,fastRecherchePattern.searchPattern(pattern, phrase));
 		assertEquals(14,fastRecherchePattern.getCompteur());
 	}
 	
