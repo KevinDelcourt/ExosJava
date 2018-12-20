@@ -14,7 +14,6 @@ public class Loterie extends TrieurParTable<Integer> {
 	}
 
 	private String affichageBoules(Integer[] boules) {
-		
 		String retour = "";
 		for(int i = 0; i < boules.length; i++){
 			retour += boules[i];
@@ -26,12 +25,12 @@ public class Loterie extends TrieurParTable<Integer> {
 	}
 
 	@Override
-	protected int toInt(Integer elem) {
+	protected int toValue(Integer elem) {
 		return elem;
 	}
 
 	@Override
-	protected Integer toElem(int i) {
+	protected Integer toItem(int i) {
 		return (Integer)i;
 	}
 }

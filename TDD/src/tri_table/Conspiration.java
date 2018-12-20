@@ -8,17 +8,11 @@ public class Conspiration extends TrieurParTable<Character> {
 	
 	public String tri(String string) {
 		String chaineNonTriée = enleverToutSaufMinuscule(string.toLowerCase());
-		Character[] charsNonTriés = new Character[chaineNonTriée.length()];
-		for(int i = 0; i < chaineNonTriée.length(); i++) 
-			charsNonTriés[i] = chaineNonTriée.charAt(i);
+		Character[] charsNonTriés = stringToCharacterArray(chaineNonTriée);
 		
 		Character[] charsTriés = trier(charsNonTriés);
 		
-		String ChaineTriée = "";
-		for(int i = 0; i < charsTriés.length; i++) 
-			ChaineTriée += charsTriés[i];
-		
-		return ChaineTriée;
+		return characterArrayToString(charsTriés);
 	}
 
 	private boolean estMinuscule(char c) {
@@ -34,13 +28,32 @@ public class Conspiration extends TrieurParTable<Character> {
 		return resultat;
 	}
 
+	private Character[] stringToCharacterArray(String string) {
+		Character[] retour = new Character[string.length()];
+		
+		for(int i = 0; i < string.length(); i++) {
+			retour[i] = string.charAt(i);
+		}
+		
+		return retour;
+	}
+	
+	private String characterArrayToString(Character[] array) {
+		String retour = "";
+		
+		for(int i = 0; i < array.length; i++) 
+			retour += array[i];
+		
+		return retour;
+	}
+	
 	@Override
-	protected int toInt(Character elem) {
+	protected int toValue(Character elem) {
 		return (int)elem - (int)'a';
 	}
 
 	@Override
-	protected Character toElem(int i) {
+	protected Character toItem(int i) {
 		return (char)('a' + i);
 	}
 

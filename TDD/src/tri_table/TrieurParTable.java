@@ -1,30 +1,34 @@
 package tri_table;
 
-public abstract class TrieurParTable<T> {
+public abstract class TrieurParTable<ClasseATrier> {
 	
-	protected int[] tab;
+	private int[] itemTriés;
 	
-	public TrieurParTable(int nbElem) {
-		this.tab = new int[nbElem];
+	public TrieurParTable(int cardinalDomaineDéfinitionValeursATrier) {
+		this.itemTriés = new int[cardinalDomaineDéfinitionValeursATrier];
 	}
 	
-	protected T[] trier(T[] elemNonTrié) {
-		for(int i = 0; i < elemNonTrié.length; i++) {
-			tab[toInt(elemNonTrié[i])]++;
+	protected ClasseATrier[] trier(ClasseATrier[] itemsNonTrié) {
+		for(int i = 0; i < itemsNonTrié.length; i++) {
+			addItem(toValue(itemsNonTrié[i]));
 		}
 		
-		T[] elemTrié = elemNonTrié;
+		ClasseATrier[] retourTrié = itemsNonTrié;
 		int rang_elem = 0;
-		for(int i = 0; i < tab.length; i++) 
-			for(int n = 0; n < tab[i];n++) {
-				elemTrié[rang_elem] = toElem(i);
+		for(int i = 0; i < itemTriés.length; i++) 
+			for(int n = 0; n < itemTriés[i];n++) {
+				retourTrié[rang_elem] = toItem(i);
 				rang_elem++;
 			}	 
 		
-		return elemTrié;
+		return retourTrié;
 	}
 	
-	protected abstract int toInt(T elem);
+	private void addItem(int valeur) {
+		itemTriés[valeur]++;
+	}
 	
-	protected abstract T toElem(int i);
+	protected abstract int toValue(ClasseATrier elem);
+	
+	protected abstract ClasseATrier toItem(int value);
 }
