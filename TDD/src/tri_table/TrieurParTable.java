@@ -9,9 +9,8 @@ public abstract class TrieurParTable<ClasseATrier> {
 	}
 	
 	protected ClasseATrier[] trier(ClasseATrier[] itemsNonTrié) {
-		for(int i = 0; i < itemsNonTrié.length; i++) {
+		for(int i = 0; i < itemsNonTrié.length; i++) 
 			addItem(toValue(itemsNonTrié[i]));
-		}
 		
 		ClasseATrier[] retourTrié = itemsNonTrié;
 		int rang_elem = 0;
