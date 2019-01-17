@@ -13,16 +13,14 @@ public class TriNotes extends TrieurParTable<Integer> {
 		Integer[] notesTriées = trier(notes);
 		
 		return affichageNotes(notesTriées);
-			
 	}
 
 	private String affichageNotes(Integer[] notesTriées) {
-		
 		String affichage = "";
+		
 		int compteur = 0;
 		int noteACompter = notesTriées[0];
-		int i;
-		for(i = 0; i < notesTriées.length; i++) {
+		for(int i = 0; i < notesTriées.length; i++) {
 			if(notesTriées[i] == noteACompter)
 				compteur++;
 			else {
@@ -31,7 +29,7 @@ public class TriNotes extends TrieurParTable<Integer> {
 				compteur = 1;
 			}
 		}
-		affichage += "("+compteur+","+notesTriées[i-1]+")";
+		affichage += "("+compteur+","+notesTriées[notesTriées.length-1]+")";
 		
 		return affichage;
 	}
