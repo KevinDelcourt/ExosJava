@@ -1,8 +1,6 @@
 package recherche_pattern;
 
-public class RecherchePattern {
-
-	protected int _compteur = 0;
+public class RecherchePattern extends MesurableRecherchePattern {
 	
 	public boolean equals(String pattern, String phrase, int position)
 	{
@@ -12,28 +10,21 @@ public class RecherchePattern {
 		if( debutPattern < 0 || position >= phrase.length() ) 
 			return false;
 		
-		for(int i = 0; i < pattern.length(); i++) {
-			_compteur++;
-			if( pattern.charAt(i) != phrase.charAt(debutPattern+i) )
+		for(int i = 0; i < pattern.length(); i++) 
+			if( pattern.charAt(i) != charAt(phrase,debutPattern+i) )
 				return false;
-		}
 			
 		return true;
 	}
 
 	public int searchPattern(String pattern, String phrase) 
 	{
-		_compteur = 0;
+		resetCompteur();
 		for(int i = 0; i < phrase.length(); i++) {
 			if( this.equals(pattern, phrase, i) ) 
 				return i;
 		}
 		return -1;
-	}
-	
-	public int getCompteur() 
-	{
-		return _compteur;
 	}
 	
 }

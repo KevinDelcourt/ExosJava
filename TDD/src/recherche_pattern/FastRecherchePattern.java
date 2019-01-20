@@ -1,6 +1,6 @@
 package recherche_pattern;
 
-public class FastRecherchePattern extends RecherchePattern {
+public class FastRecherchePattern extends MesurableRecherchePattern {
 
 	private int[] _delta1;
 	private int[] _delta2;
@@ -10,8 +10,8 @@ public class FastRecherchePattern extends RecherchePattern {
 	{
 		_delta1 = buildDelta1(pattern);
 		_delta2 = buildDelta2(pattern);		
-		_compteur = 0;
 
+		resetCompteur();
 		for(_i = pattern.length()-1; _i < phrase.length();)
 			if( this.equals(pattern, phrase) ) 
 				return _i+pattern.length();
@@ -25,11 +25,10 @@ public class FastRecherchePattern extends RecherchePattern {
 			return false;
 		
 		for(int j = pattern.length()-1; j >= 0; _i--, j--) {
-			_compteur++;
-			if( pattern.charAt(j) != phrase.charAt(_i) ) {	
+			if( pattern.charAt(j) != charAt(phrase,_i) ) {	
 				
 				_i += Math.max(
-						_delta1[this.charCode(phrase.charAt(_i))], 
+						_delta1[this.charCodeDelta1(phrase.charAt(_i))], 
 						_delta2[j]);
 				
 				return false;
@@ -40,7 +39,7 @@ public class FastRecherchePattern extends RecherchePattern {
 	
 	public boolean equals(String pattern, String phrase, int i)
 	{
-		_compteur = 0;
+		resetCompteur();
 		_i = i;
 		_delta1 = this.buildDelta1(pattern);
 		_delta2 = this.buildDelta2(pattern);	
@@ -55,7 +54,7 @@ public class FastRecherchePattern extends RecherchePattern {
 			delta1[i] = pattern.length();
 		
 		for(int i = 0; i < pattern.length(); i++) 
-			delta1[this.charCode(pattern.charAt(i))] = pattern.length()-i-1;
+			delta1[this.charCodeDelta1(pattern.charAt(i))] = pattern.length()-i-1;
 		
 		return delta1;
 	}
@@ -88,9 +87,7 @@ public class FastRecherchePattern extends RecherchePattern {
 		return unify;
 	}
 	
-	//Donne l'emplacement d'un caractère dans le tableau delta1
-	//Seules les majuscules + le point et le tiret sont traités
-	private int charCode(char c) {
+	private int charCodeDelta1(char c) {
 		if(c == '-')
 			return 27;
 		if(c == '.')
