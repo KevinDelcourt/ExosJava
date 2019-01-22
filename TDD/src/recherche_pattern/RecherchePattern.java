@@ -4,14 +4,13 @@ public class RecherchePattern extends MesurableRecherchePattern {
 	
 	public boolean equals(String pattern, String phrase, int position)
 	{
-		//Position du début du pattern dans la phrase
 		int debutPattern = position - pattern.length() + 1;
 		
 		if( debutPattern < 0 || position >= phrase.length() ) 
 			return false;
 		
-		for(int i = 0; i < pattern.length(); i++) 
-			if( pattern.charAt(i) != charAt(phrase,debutPattern+i) )
+		for(int j = 0; j < pattern.length(); j++) 
+			if( pattern.charAt(j) != charAtMesurable(phrase,debutPattern+j) )
 				return false;
 			
 		return true;

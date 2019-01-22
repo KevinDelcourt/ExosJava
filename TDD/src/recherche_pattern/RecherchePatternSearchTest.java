@@ -77,7 +77,7 @@ public class RecherchePatternSearchTest {
     
     @Test
 
-    public void testEqualsRecherchePattern() {
+    public void testSearchRecherchePattern() {
 
         RecherchePattern rp = new RecherchePattern();
 
@@ -87,7 +87,7 @@ public class RecherchePatternSearchTest {
     
     @Test
 
-    public void testEqualsFastRecherchePattern() {
+    public void testSearchFastRecherchePattern() {
 
         FastRecherchePattern frp = new FastRecherchePattern();
 

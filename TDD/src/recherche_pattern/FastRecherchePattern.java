@@ -2,50 +2,57 @@ package recherche_pattern;
 
 public class FastRecherchePattern extends MesurableRecherchePattern {
 
-	private int[] _delta1;
-	private int[] _delta2;
-	private int _i;
+	private int[] delta1;
+	private int[] delta2;
+	private int phraseIndex;
+	private String pattern;
+	private String phrase;
 	
 	public int searchPattern(String pattern, String phrase) 
 	{
-		_delta1 = buildDelta1(pattern);
-		_delta2 = buildDelta2(pattern);		
-
-		resetCompteur();
-		for(_i = pattern.length()-1; _i < phrase.length();)
-			if( this.equals(pattern, phrase) ) 
-				return _i+pattern.length();
+		this.preProcesssing(pattern,phrase);
+		
+		for(phraseIndex = pattern.length()-1; phraseIndex < phrase.length();)
+			if( this.equalsPatternPhrase() ) 
+				return phraseIndex+pattern.length();
 		
 		return -1;
 	}
 	
-	private boolean equals(String pattern, String phrase)
+	private boolean equalsPatternPhrase()
 	{
-		if( _i - pattern.length() + 1 < 0 || _i >= phrase.length() ) 
-			return false;
-		
-		for(int j = pattern.length()-1; j >= 0; _i--, j--) {
-			if( pattern.charAt(j) != charAt(phrase,_i) ) {	
+		for(int patIndex = pattern.length()-1; patIndex >= 0; phraseIndex--, patIndex--) 
+			if( pattern.charAt(patIndex) != charAtMesurable(phrase,phraseIndex) ) {	
 				
-				_i += Math.max(
-						_delta1[this.charCodeDelta1(phrase.charAt(_i))], 
-						_delta2[j]);
+				phraseIndex += Math.max(
+						delta1[this.charCodeDelta1(phrase.charAt(phraseIndex))], 
+						delta2[patIndex]);
 				
 				return false;
 			}	
-		}
+		
 		return true;
 	}
 	
-	public boolean equals(String pattern, String phrase, int i)
+	public boolean equals(String pattern, String phrase, int position)
 	{
-		resetCompteur();
-		_i = i;
-		_delta1 = this.buildDelta1(pattern);
-		_delta2 = this.buildDelta2(pattern);	
-		return this.equals(pattern,phrase);
+		if( position - pattern.length() + 1 < 0 || position >= phrase.length() ) 
+			return false;
+		
+		this.preProcesssing(pattern,phrase);
+		phraseIndex = position;
+		
+		return this.equalsPatternPhrase();
 	}
 
+	private void preProcesssing(String pattern,String phrase) {
+		this.pattern = pattern;
+		this.phrase = phrase;
+		this.delta1 = this.buildDelta1(pattern);
+		this.delta2 = this.buildDelta2(pattern);		
+		this.resetCompteur();
+	}
+	
 	public int[] buildDelta1(String pattern) 
 	{
 		int[] delta1 = new int[28];//Toutes les lettres de l'alphabet + '.' + '-'
@@ -63,22 +70,28 @@ public class FastRecherchePattern extends MesurableRecherchePattern {
 	{
 		int[] delta2 = new int[pattern.length()];
 		
-		for(int j = 0; j < pattern.length()-1; j++) {
-			int k;
-			for(k = pattern.length() - 3; 
-				!unify(pattern,k,j) || (k>=1 && pattern.charAt(k-1) == pattern.charAt(j)); 
-				k--) {}
-			delta2[j] = pattern.length() - k ;
-		}
+		for(int j = 0; j < pattern.length()-1; j++) 
+			delta2[j] = pattern.length() - rightmostPlausibleReoccurrence(pattern,j) ;
+		
 		delta2[pattern.length()-1] = 1;
 		return delta2;
 	}
 	
-	//Voir définition de unify dans l'article
+	private int rightmostPlausibleReoccurrence(String pattern, int j) {
+		int k;
+		for(k = pattern.length()-1 ; 
+			!unify(pattern,k,j) || (k>=1 && pattern.charAt(k-1) == pattern.charAt(j)); 
+			k--) {}
+		return k;
+	}
+	
 	private boolean unify(String pattern, int k, int j) 
 	{
 		boolean unify = true;
-		for(int x = 0; x < pattern.length() - j - 1 ; x++) {
+		for(int x = 0; x < pattern.length() - j ; x++) {
+			if(x+j+1 > pattern.length() || x+k > pattern.length())
+				unify = false;
+			
 			try {
 				unify = unify && pattern.charAt(x+j+1) == pattern.charAt(x+k);
 			}catch(StringIndexOutOfBoundsException e) {	}
@@ -86,6 +99,7 @@ public class FastRecherchePattern extends MesurableRecherchePattern {
 			
 		return unify;
 	}
+
 	
 	private int charCodeDelta1(char c) {
 		if(c == '-')

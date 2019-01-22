@@ -14,7 +14,7 @@ public abstract class MesurableRecherchePattern {
 		this.compteur = 0;
 	}
 	
-	public char charAt(String string, int index) {
+	public char charAtMesurable(String string, int index) {
 		compteur++;
 		return string.charAt(index);	
 	}

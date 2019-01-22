@@ -68,5 +68,13 @@ public class FastRecherchePatternTest {
 		assertEquals(14,fastRecherchePattern.getCompteur());
 	}
 	
+	@Test
+	public void performanceTestSearchBugDelta2()
+	{
+		String phrase = "HHYXCDEYXABYXCDEYX";
+		assertEquals(17,fastRecherchePattern.searchPattern("ABYXCDEYX", phrase));
+		assertEquals(17,fastRecherchePattern.getCompteur());
+	}
+	
 }
 
