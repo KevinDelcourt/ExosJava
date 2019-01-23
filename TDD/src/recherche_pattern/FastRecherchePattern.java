@@ -21,7 +21,7 @@ public class FastRecherchePattern extends MesurableRecherchePattern {
 	{
 		for(int patIndex = pattern.length()-1; patIndex >= 0; phraseIndex--, patIndex--) {
 			char testedChar = this.charAtMesurable(phrase,phraseIndex);
-			if( pattern.charAt(patIndex) !=  testedChar) {	
+			if( pattern.charAt(patIndex) != testedChar) {	
 				phraseIndex += Math.max(
 						delta1[charCodeDelta1(testedChar)], 
 						delta2[patIndex]);
@@ -29,7 +29,6 @@ public class FastRecherchePattern extends MesurableRecherchePattern {
 				return false;
 			}	
 		}
-			
 		return true;
 	}
 	
@@ -93,7 +92,6 @@ public class FastRecherchePattern extends MesurableRecherchePattern {
 				unify = unify && pattern.charAt(x+j+1) == pattern.charAt(x+k);
 			}catch(StringIndexOutOfBoundsException e) {	}
 		
-			
 		return unify;
 	}
 

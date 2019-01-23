@@ -27,8 +27,7 @@ public class FastRecherchePatternTest {
 	@Test
 	public void performanceTestEquals() 
 	{
-		//Ne peux passer que si les comparaisons commencent à droite
-		fastRecherchePattern.equals(pattern,phrase,24);
+		assertFalse(fastRecherchePattern.equals(pattern,phrase,24));
 		assertEquals(1,fastRecherchePattern.getCompteur());
 	}
 	
@@ -61,6 +60,22 @@ public class FastRecherchePatternTest {
 	}
 	
 	@Test
+	public void performanceTestSearchUsingOnlyDelta1()
+	{
+		String phrase = "......H.A-...X......Z......QAT-THAT....";
+		assertEquals(34,fastRecherchePattern.searchPattern("AT-THAT", phrase));
+		assertEquals(13,fastRecherchePattern.getCompteur());
+	}
+	
+	@Test
+	public void performanceTestSearchUsingOnlyDelta2()
+	{
+		String phrase = "HHYXCDEYXABYXCDEYX";
+		assertEquals(17,fastRecherchePattern.searchPattern("ABYXCDEYX", phrase));
+		assertEquals(17,fastRecherchePattern.getCompteur());
+	}
+	
+	@Test
 	public void performanceTestAcceptation()
 	{
 		String phrase = "WHICH-FINALLY-HALTS.--AT-THAT-POINT";
@@ -68,13 +83,7 @@ public class FastRecherchePatternTest {
 		assertEquals(14,fastRecherchePattern.getCompteur());
 	}
 	
-	@Test
-	public void performanceTestSearchBugDelta2()
-	{
-		String phrase = "HHYXCDEYXABYXCDEYX";
-		assertEquals(17,fastRecherchePattern.searchPattern("ABYXCDEYX", phrase));
-		assertEquals(17,fastRecherchePattern.getCompteur());
-	}
+	
 	
 }
 
