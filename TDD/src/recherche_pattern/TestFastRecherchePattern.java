@@ -25,7 +25,7 @@ public class TestFastRecherchePattern {
 	} 
 	
 	@Test
-	public void performanceTestEquals() 
+	public void performanceTestEqualsStartingFromRight() 
 	{
 		assertFalse(fastRecherchePattern.equals(pattern,phrase,24));
 		assertEquals(1,fastRecherchePattern.getCompteur());
