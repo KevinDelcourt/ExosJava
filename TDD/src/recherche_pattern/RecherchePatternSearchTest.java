@@ -43,8 +43,20 @@ public class RecherchePatternSearchTest {
     public static Collection<Object[]> getAllSearchTests() {
 
         return Arrays.asList(new Object[][] {
-
+        	
         	{"BLXRT",PHRASE,-1},
+        	
+        	{"O",PHRASE,34},
+        	
+        	{"AL",PHRASE,13},
+        	
+        	{"Y-",PHRASE,16},
+        	
+        	{"T..",PHRASE,39},
+        	
+        	{"AT-T",PHRASE,28},
+        	
+        	{"TS.-",PHRASE,23},
         	
         	{"WHICH",PHRASE,7},
         	
