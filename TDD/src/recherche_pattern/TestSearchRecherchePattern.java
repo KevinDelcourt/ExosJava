@@ -16,7 +16,7 @@ import org.junit.runners.Parameterized.Parameters;
 
 @RunWith(Parameterized.class)
 
-public class RecherchePatternSearchTest {
+public class TestSearchRecherchePattern {
 
 	public final static String PATTERN = "AT-THAT";  
 
@@ -28,7 +28,7 @@ public class RecherchePatternSearchTest {
     
     private int expectedResult;
 
-    public RecherchePatternSearchTest(String pattern, String phrase, int expectedResult) {
+    public TestSearchRecherchePattern(String pattern, String phrase, int expectedResult) {
 
     	this.pattern = pattern;
     	

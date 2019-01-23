@@ -6,7 +6,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class FastRecherchePatternTest {
+public class TestFastRecherchePattern {
 
 	public final static String pattern = "AT-THAT";  
 	public final static String phrase = "...WHICH-FINALLY-HALTS.--AT-THAT-POINT...";  

@@ -16,7 +16,7 @@ import org.junit.runners.Parameterized.Parameters;
 
 @RunWith(Parameterized.class)
 
-public class RecherchePatternEqualsTest {
+public class TestEqualsRecherchePattern {
 
 	public final static String phrase = "...WHICH-FINALLY-HALTS.--AT-THAT-POINT..."; 
 	
@@ -26,7 +26,7 @@ public class RecherchePatternEqualsTest {
     
     private String pattern;
 
-    public RecherchePatternEqualsTest(String pattern, int searchIndex, boolean expectedResult) {
+    public TestEqualsRecherchePattern(String pattern, int searchIndex, boolean expectedResult) {
 
     	this.pattern = pattern;
     	

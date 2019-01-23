@@ -5,7 +5,7 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({ FastRecherchePatternTest.class, RecherchePatternEqualsTest.class, RecherchePatternSearchTest.class })
+@SuiteClasses({ TestFastRecherchePattern.class, TestEqualsRecherchePattern.class, TestSearchRecherchePattern.class })
 public class AllTests {
 
 }
