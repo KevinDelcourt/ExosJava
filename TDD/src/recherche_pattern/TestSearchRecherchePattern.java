@@ -89,9 +89,9 @@ public class TestSearchRecherchePattern {
     
     @Test
 
-    public void testSearchRecherchePattern() {
+    public void testSearchNaiveRecherchePattern() {
 
-        RecherchePattern rp = new RecherchePattern();
+        NaiveRecherchePattern rp = new NaiveRecherchePattern();
 
         assertEquals(this.expectedResult,searchWithInfo(rp));
 

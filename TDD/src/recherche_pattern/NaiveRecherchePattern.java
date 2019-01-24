@@ -1,6 +1,6 @@
 package recherche_pattern;
 
-public class RecherchePattern extends MesurableRecherchePattern {
+public class NaiveRecherchePattern extends MesurableRecherchePattern {
 	
 	public boolean equals(String pattern, String phrase, int position)
 	{

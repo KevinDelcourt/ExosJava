@@ -80,9 +80,9 @@ public class TestEqualsRecherchePattern {
 
     @Test
 
-    public void testEqualsRecherchePattern() {
+    public void testEqualsNaiveRecherchePattern() {
 
-        RecherchePattern rp = new RecherchePattern();
+        NaiveRecherchePattern rp = new NaiveRecherchePattern();
 
         assertEquals(this.expectedResult,rp.equals(this.pattern, phrase, this.searchIndex));
 
