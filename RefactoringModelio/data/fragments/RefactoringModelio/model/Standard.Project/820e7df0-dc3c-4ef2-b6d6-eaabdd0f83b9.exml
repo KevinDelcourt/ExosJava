@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="RefactoringModelio" version="4">
+  <OBJECT>
+    <ID name="RefactoringModelio" mc="Standard.Project" uid="820e7df0-dc3c-4ef2-b6d6-eaabdd0f83b9"/>
+    <ATTRIBUTES>
+      <ATT name="ProjectContext"></ATT>
+      <ATT name="ProjectDescr"></ATT>
+      <ATT name="Name"><![CDATA[RefactoringModelio]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="Model">
+        <COMPID name="RefactoringModelio" mc="Standard.Package" uid="d5a82f30-8736-40d5-a7f1-932bc02d8009"/>
+      </COMP>
+      <COMP relation="DiagramRoot">
+        <COMPID name="RefactoringModelio" mc="Infrastructure.DiagramSet" uid="a0d355c7-e04b-44cf-962b-24a67741171e"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

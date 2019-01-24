@@ -1,0 +1,66 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Class Architecture Diagram (automatic)" version="4">
+  <OBJECT>
+    <ID name="Class Architecture Diagram (automatic)" mc="Standard.ClassDiagram" uid="92ea7975-9b27-4169-9444-1e0d3f867d13"/>
+    <PID name="Film" mc="Standard.Class" uid="31cfdaaf-7af1-4ffe-8355-163d0cda915f"/>
+    <ATTRIBUTES>
+      <ATT name="UiDataVersion">6</ATT>
+      <ATT name="UiData"><![CDATA[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]]></ATT>
+      <ATT name="Name"><![CDATA[Class Architecture Diagram (automatic)]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <LINK relation="Represented">
+        <ID name="Location" mc="Standard.Class" uid="285bbf35-3974-4e87-8986-8aa6b2f5f21b"/>
+        <REFOBJ>
+          <ID name="NOUVEAUTE" mc="Standard.Attribute" uid="e656fb07-c0e3-4c2b-8425-ea73fcf5357d"/>
+        </REFOBJ>
+        <REFOBJ>
+          <ID name="unFilm" mc="Standard.AssociationEnd" uid="2256e245-37df-4244-959d-d3f9de788ff0"/>
+        </REFOBJ>
+        <REFOBJ>
+          <ID name="" mc="Standard.AssociationEnd" uid="fa7223f5-49b8-48b0-a5ac-59df5b1bba41"/>
+        </REFOBJ>
+        <REFOBJ>
+          <ID name="NORMAL" mc="Standard.Attribute" uid="9e5fb408-10de-490f-ac71-810cc001d480"/>
+        </REFOBJ>
+        <REFOBJ>
+          <ID name="ENFANT" mc="Standard.Attribute" uid="5cb41344-d544-4ac1-b11f-cd3ec2db7b69"/>
+        </REFOBJ>
+        <ID name="Film" mc="Standard.Class" uid="31cfdaaf-7af1-4ffe-8355-163d0cda915f"/>
+      </LINK>
+      <LINK relation="Extension">
+        <FOREIGNID name="AutoDiagram" mc="Infrastructure.Stereotype" uid="8fb43b1c-7819-11e1-a4f1-002564c97630"/>
+      </LINK>
+      <COMP relation="Properties">
+        <OBJECT>
+          <ID name="AutoDiagram" mc="Infrastructure.PropertyTable" uid="d7014f89-f00b-4db2-899f-52e5ac81f0a8"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[AutoDiagram]]></ATT>
+            <ATT name="Content"><![CDATA[#Thu Jan 24 10:59:53 CET 2019
+Kind=architecture_autodiagram
+]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="Descriptor">
+        <OBJECT>
+          <ID name="" mc="Infrastructure.Note" uid="438f4a16-ca34-4962-b53e-05a4d1d9bd7b"/>
+          <ATTRIBUTES>
+            <ATT name="Content"></ATT>
+            <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Model">
+              <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

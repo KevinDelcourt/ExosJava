@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Version1 Class diagram" version="4">
+  <OBJECT>
+    <ID name="Version1 Class diagram" mc="Standard.ClassDiagram" uid="4f7458cc-f3b8-47b2-a8f7-61f08f0add86"/>
+    <PID name="Version1" mc="Standard.Package" uid="4b7e9ffd-2db8-4c61-8900-f5c898c750cc"/>
+    <ATTRIBUTES>
+      <ATT name="UiDataVersion">10</ATT>
+      <ATT name="UiData"><![CDATA[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]]></ATT>
+      <ATT name="Name"><![CDATA[Version1 Class diagram]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <LINK relation="Represented">
+        <ID name="Location" mc="Standard.Class" uid="285bbf35-3974-4e87-8986-8aa6b2f5f21b"/>
+        <ID name="Film" mc="Standard.Class" uid="31cfdaaf-7af1-4ffe-8355-163d0cda915f"/>
+        <ID name="Client" mc="Standard.Class" uid="4f6223f8-d67c-40ae-8858-36894f1f02e3"/>
+      </LINK>
+      <COMP relation="Descriptor">
+        <OBJECT>
+          <ID name="" mc="Infrastructure.Note" uid="4e31d3f7-9c51-4bff-98bb-41516b0845bf"/>
+          <ATTRIBUTES>
+            <ATT name="Content"></ATT>
+            <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Model">
+              <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

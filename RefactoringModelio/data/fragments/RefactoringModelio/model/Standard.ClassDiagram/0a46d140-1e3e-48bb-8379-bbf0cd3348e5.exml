@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Class Architecture Diagram (automatic)" version="4">
+  <OBJECT>
+    <ID name="Class Architecture Diagram (automatic)" mc="Standard.ClassDiagram" uid="0a46d140-1e3e-48bb-8379-bbf0cd3348e5"/>
+    <PID name="Client" mc="Standard.Class" uid="4f6223f8-d67c-40ae-8858-36894f1f02e3"/>
+    <ATTRIBUTES>
+      <ATT name="UiDataVersion">26</ATT>
+      <ATT name="UiData"><![CDATA[eJztmlFT4joUx79Kh7kP9z5Q2oKIV9YdBMbriOIU3ZndFya0B8iaNkwSVvDTb1IoK1VrLbV4nT5BQnOS0/z+p+c0NL8uPKL9AsYx9b+UTN0oaV9Pmv3RT3CEhl3ZVdLEcgZfSpRNdI+6QDDVXYwmDHk6uFhQpnOBBL7TgYAHvuCrthNedOYNgnZn1S5pHvpJ2XAzqVE6aV4zOgMmlpqPPDkXQUs6Fx0kkPztGyJzWC/CnxNSqpw0K+GAJ0MHYkmgtOWCFecCV9dz3aEM9NXYBOtrI+4gF9xwsu5C2DBOOMuVNLEeqcFCdEbnco3BV/XlcjVSq+qLiKOVlUtxzjMgSIAr1xK5b5eqS/uletQtQr6LmKu3CeJ8vS2agWp116wZZROqUK41RqNyo3p4VB6NxobjVqu1BhzE33ppTVz49N7voRGQyAoGgmF/UjoJ5tRazJliIb2ZM9DCFfyN5oJ6CpV/mpVgbKyvlMC536bejHIs5E69MGECU+0pJi4DZaGHudiCp5qCf4eghwfJfeDrTrzbchnInyhU1ptnHRjHcpeOLUN+GsabxVD7P4nBQ9iP97Ddaw0GQ7t7bXcHw8t+pxu5gV1/7v2byNULWP5lw4wBl3uIFFBKin9Ec2Pftm9u7W4nH1lqtXHdsqrjRtmtHzrlmoGg3GgcNMrVeuOoNjbHhgXVTPSIpb8fR28Hu+rtmmEPseVVsHmZSs84Ti+7elLZSVOLZWrtKeGtVF5AGgfppQwsipAdYT1MAauyymfIgSnInWMS26uw57+gJ/8EqZEvnPUCzlg4VxgkMMin9H6InSeGTqmcCfmb+zJGhEO8p4GpO1jeU+ZmYE0g527IBTCgr1gTbJ5kaeSZDXi7KTTigiFHpPBwA+kj3Ryle1Zxjsc4UH5707CB4wc0InDG6HyWfwgwjSIGfKQYsOODyUxTtiMhJx/NBUwUgxLPVtixLygTV+7ZQGlG87qCym2D20CkYbSy/ogPrGaaqlsZDOq2EN9+2LEvfBPX2gW++WT9IKbUfW9201Sw2Je5ki/TDpnDBC/FJL7n675B2LcHgnMuWwuCXyE4ZGLX9CBN4ZqI0X2F2pxLWPOT5a8ZIvre4TVN0ZUI3R/U30OItXIuvD4buZmHWIVBxvgmI9tKU7Nh3wcWvFMIkJaN3Q+dlDIm6j3kemPL5tupLiq3j0V1gMaOWYOVpip7AdA95QlWziWZ1EHB5R6zBStdMfYsssD3lCHkXIQVzH6oDOHpT5F5MP8mW9hBKc5Hks/y9HRdX8P1SvYQ3cJnZZqqHvXQBDanqcEBkdKr6lUnqgPVu+Iiy2QoerKeQL8516bF2X+8fAfSVUKwSKLhz3DCmnRtKY9YM4lhPezf8ZhAGbn8dNJh6F7uZg8tpTa35Rb/giCMHu7KANeJMiEDx5bFfB7ybxu13z934ii0oZw6Z3qv9b1rD09b7Yszu3971cn64fiilcd79gefx//ejH27UsDwbjDc9K9zS5F+A68oXuk=]]></ATT>
+      <ATT name="Name"><![CDATA[Class Architecture Diagram (automatic)]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <LINK relation="Represented">
+        <ID name="Client" mc="Standard.Class" uid="4f6223f8-d67c-40ae-8858-36894f1f02e3"/>
+      </LINK>
+      <LINK relation="Extension">
+        <FOREIGNID name="AutoDiagram" mc="Infrastructure.Stereotype" uid="8fb43b1c-7819-11e1-a4f1-002564c97630"/>
+      </LINK>
+      <COMP relation="Properties">
+        <OBJECT>
+          <ID name="AutoDiagram" mc="Infrastructure.PropertyTable" uid="5bc8232e-a04f-4eea-8126-d0d298cbdf27"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[AutoDiagram]]></ATT>
+            <ATT name="Content"><![CDATA[#Thu Jan 24 11:01:23 CET 2019
+Kind=architecture_autodiagram
+]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="Descriptor">
+        <OBJECT>
+          <ID name="" mc="Infrastructure.Note" uid="3f0e6181-c809-4ddd-bc23-9e6f39987c26"/>
+          <ATTRIBUTES>
+            <ATT name="Content"></ATT>
+            <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Model">
+              <FOREIGNID name="description" mc="Infrastructure.NoteType" uid="00000000-0000-3e81-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Class Structure" version="4">
+  <OBJECT>
+    <ID name="Class Structure" mc="Infrastructure.DiagramSet" uid="616cb75d-947a-4a26-bcdd-7b290da06440"/>
+    <PID name="Auto Diagrams" mc="Infrastructure.DiagramSet" uid="6fff77d2-7a62-4225-ad0d-16375452774d"/>
+    <ATTRIBUTES>
+      <ATT name="Name"><![CDATA[Class Structure]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <LINK relation="ReferencedDiagram">
+        <ID name="Class Structure Diagram (automatic)" mc="Standard.ClassDiagram" uid="c2743904-edbb-4605-a689-f4e71c910d89"/>
+        <ID name="Location (structure_autodiagram)" mc="Standard.ClassDiagram" uid="658d9eed-04a5-481b-850f-ed58e631a508"/>
+        <ID name="Film (structure_autodiagram)" mc="Standard.ClassDiagram" uid="5f15d9b0-f600-4a37-9b68-0b4514ee61de"/>
+      </LINK>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

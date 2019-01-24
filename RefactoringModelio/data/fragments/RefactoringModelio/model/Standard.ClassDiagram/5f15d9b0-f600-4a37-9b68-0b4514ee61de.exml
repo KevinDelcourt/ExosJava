@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Film (structure_autodiagram)" version="4">
+  <OBJECT>
+    <ID name="Film (structure_autodiagram)" mc="Standard.ClassDiagram" uid="5f15d9b0-f600-4a37-9b68-0b4514ee61de"/>
+    <PID name="Film" mc="Standard.Class" uid="31cfdaaf-7af1-4ffe-8355-163d0cda915f"/>
+    <ATTRIBUTES>
+      <ATT name="UiDataVersion">21</ATT>
+      <ATT name="UiData"><![CDATA[eJztm1tT4kgUx79KitqH3YfEXLmsjlMIjEuJYAFatftCdbo72GMuVHczip9+O4EwGjXGEAMzlRclTfr07ffvPucknHx98FzpB6aMBP6XmqaoNenr6cnI/o4hlwgSRTWJrxb4Sy2gc8ULEHZJoCAC5hR4CkaEB1RhHHByp2AXe9jnbH0N45vOvUl03V1f1yQPfA/obNuoWjs9uaLBAlO+knzgibZcsAqWvAs4EN/dAHeJN53wl65bOzo9OYorvKg64SsX154NQU8bAgvvZwoMKFbWdTP0rwMYBAijuLHeAx9jJ2MrQ2FiU1PCD7xr90Ufo4/hh8t1TclQHhIDPVoPKW3wFLuAYyT6kpi3y7BI+hGWhFMEfAQoUjouYGyzLJLlaBZq2ars1FVVNoHRkFt2vSmrtmlpJsZ1DeH0qRfW+IUf3PsDYGM30YMJp8Sf106/EdeT/mScLiFfUjwDSx5sZumvk6OoRuoIAxf3/U7gLQJGuFifN5rJYKpzS1xEcWhhQBh/hoyRg3rogsdHQXs0qztRPhbdAP48BGSzZLqlHmumeqyr4r/W+LAEzF9JAh4gfvoIO4P2ZDIb967GvcnsctTtJSaw5y+9vzMN9QKv/hjjBcVMrCEIgQoF+FMq0/F1Z3o97nWzdKg9nc7Ox6Prq5v+pH82SPbqLBDwAn9rXGggqahP0rhkaNBBADhyAziabDoOlpuGZcla3UAqRKClWU5B4j4cEVu7iviKEg/Q1TAiolA9q8f5tVzPqmVh6mGVW9ChmtdbR4Xo24heir0q5GNHVBs5UA2tsgWA+BaLdaMC2mFc8k9UUr6n1SwXzXqFZgqaawgyGGS3wf2MwBeGkueVA1z2jgsYmbrDq/uAogKscQDvZoxjioOPn6Wvdc19Zfo/bgrYwn8FkOcY4RbRJ6pp5TunGCMOiXTf2V6MMSOPwHbxOQ2Wi/I3AE2tdoDD2QF2PJS0PLE/4KJxe8nxPCRQwNmOC3ZHsu8Ls+G5tlmkuvZxQDMnA4oBVAiiIvRtQp/DsSuveaL2La9PUS2UUjkHpZnj9YIo1T+d0u3cSha0Tc0wTRlZ4o8JoCbbmubIEBkY6shu2PVWAaT2ht/aw2m5u+nv4Ell7VtOV+o1B0jLE6kfpnBLDs5LFS6uW3XHVhsyVLEhm1C35aapWzIGDcOBjmVYDVSAcIej65te+3raq7T7K2g3T+riMLVbcvaiVO22sOXYptqUNRVh2WypjgxgQ5ObmgqhqmrIbCY91XzaHV+2B5VwD1W4R2un+T1N58lIhAajByhx4DeKC/aUi9BLzkVUoV56phzz2wDljvOykavnSVkQcXZQXygwfigt4O1vyiZx2R74rVIVh8RvTMSOSQo9T5IiE6H72mZLzlXon+82lYppgYh+9uaaJ0zPhO5/gb+PDbbkYP13I7fgDTaEoGB4M3KdJ4Qlvo9p9BQuAlpc7P7eVzKI1d7Jg77GdNlBbOU0pDsNfqZH8KkeQ55o7A089+QjGCWHYkIFFZV78xOMfEHYq8Bith/fwCg5+KqIPSDf4OVXiXYIuxFXBIJic3GJVl6+haps0HrHbzAy5O2NXHGoB+Z4+95hlIwM1RqWhu8eTsLSNRVFukHJN1AzqLfkmLR6RzZNvBMxUNclPIuCq2R+Icn8d/eWAfHvWMo2mbj9bN6l4F6s5gCshDKfiy09LRDvHWhtgCluaEJsG88slnPAf6zWfn9NRZLQxnLqniuD9r+98eys3bkIf24y7BZ9NL5p5ema/cTnKQypOZUKhk+DYTq6Ks1B+h+E+G2/]]></ATT>
+      <ATT name="Name"><![CDATA[Film (structure_autodiagram)]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <LINK relation="Represented">
+        <ID name="Film" mc="Standard.Class" uid="31cfdaaf-7af1-4ffe-8355-163d0cda915f"/>
+        <REFOBJ>
+          <ID name="ENFANT" mc="Standard.Attribute" uid="5cb41344-d544-4ac1-b11f-cd3ec2db7b69"/>
+        </REFOBJ>
+        <REFOBJ>
+          <ID name="NOUVEAUTE" mc="Standard.Attribute" uid="e656fb07-c0e3-4c2b-8425-ea73fcf5357d"/>
+        </REFOBJ>
+        <REFOBJ>
+          <ID name="NORMAL" mc="Standard.Attribute" uid="9e5fb408-10de-490f-ac71-810cc001d480"/>
+        </REFOBJ>
+      </LINK>
+      <LINK relation="Extension">
+        <FOREIGNID name="AutoDiagram" mc="Infrastructure.Stereotype" uid="8fb43b1c-7819-11e1-a4f1-002564c97630"/>
+      </LINK>
+      <COMP relation="Properties">
+        <OBJECT>
+          <ID name="AutoDiagram" mc="Infrastructure.PropertyTable" uid="7ade2a62-7eec-4d2e-8dd4-3e827995a8bc"/>
+          <ATTRIBUTES>
+            <ATT name="Name"><![CDATA[AutoDiagram]]></ATT>
+            <ATT name="Content"><![CDATA[#Thu Jan 24 10:48:51 CET 2019
+Kind=structure_autodiagram
+]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES></DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>
