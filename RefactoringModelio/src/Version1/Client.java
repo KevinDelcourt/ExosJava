@@ -57,8 +57,8 @@ public class Client {
 		}
 		
 		// ajout r�capitulatif client
-		result += "Total d� " + String.valueOf(totalDu) + "\n";
-		result += "Vous gagnez " + String.valueOf(pointsFidelites) + " points de fid�lit�\n";
+		result += "Total du " + String.valueOf(totalDu) + "\n";
+		result += "Vous gagnez " + String.valueOf(pointsFidelites) + " points de fidelite\n";
 		
 		return result;
 	}

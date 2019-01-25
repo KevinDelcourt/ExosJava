@@ -21,6 +21,6 @@ public abstract class MesurableRecherchePattern {
 	
 	public abstract boolean equals(String pattern, String phrase, int position);
 	
-	public  abstract int searchPattern(String pattern, String phrase) ;
+	public abstract int searchPattern(String pattern, String phrase) ;
 	
 }
