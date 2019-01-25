@@ -7,7 +7,7 @@ import org.junit.Test;
 
 import Version1.*;
 
-public class TestSituationClient {
+public class TestClientSituation {
 	
 	private Client client;
 
