@@ -1,6 +1,6 @@
 package Test;
 
-import Version1.*;
+import Version2.*;
 
 public class Scenario {
 	
@@ -9,7 +9,7 @@ public class Scenario {
 		Film unFilm = new Film(nomFilm, typeFilm);
 		Location uneLocation = new Location(unFilm, nbJours);
 		unClient.addLocation(uneLocation);
-		return unClient.situation();
+		return unClient.situationHTML();
 	}
 	
 	public void testSituationCumul(Client unClient, String nomFilm, int typeFilm, int nbJours) {

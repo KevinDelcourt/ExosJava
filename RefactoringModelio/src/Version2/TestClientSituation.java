@@ -112,6 +112,42 @@ public class TestClientSituation {
 	}
 	
 	@Test
+	public void testLocationFilmCoffret() {
+		this.client = creerClientAvec1Film("un client","James Bond",Film.COFFRET_SERIES_TV,5);
+
+		String attendu  = "Situation du client: un client\n"
+				+ "\tJames Bond\t2.5\n"
+				+ "Total du 2.5\n"
+				+ "Vous gagnez 0 points de fidelite\n";
+		
+		assertEquals(attendu,this.client.situation());
+	}
+	
+	@Test
+	public void testLocationFilmCinephile1Jour() {
+		this.client = creerClientAvec1Film("un client","Un taxi pour Tobrouk",Film.CINEPHILE,1);
+
+		String attendu  = "Situation du client: un client\n"
+				+ "\tUn taxi pour Tobrouk\t2.0\n"
+				+ "Total du 2.0\n"
+				+ "Vous gagnez 3 points de fidelite\n";
+		
+		assertEquals(attendu,this.client.situation());
+	}
+	
+	@Test
+	public void testLocationFilmCinephilePlusDe1Jour() {
+		this.client = creerClientAvec1Film("un client","Un taxi pour Tobrouk",Film.CINEPHILE,3);
+
+		String attendu  = "Situation du client: un client\n"
+				+ "\tUn taxi pour Tobrouk\t10.0\n"
+				+ "Total du 10.0\n"
+				+ "Vous gagnez 1 points de fidelite\n";
+		
+		assertEquals(attendu,this.client.situation());
+	}
+	
+	@Test
 	public void testLocationCumul() {
 		this.client = creerClientAvec1Film("client cumul","Taxi Driver",Film.NORMAL,2);
 		ajoutLocationAUnClient(this.client,"11 heures 14",Film.NOUVEAUTE,1);
