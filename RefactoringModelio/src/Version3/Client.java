@@ -18,49 +18,43 @@ public class Client {
 		return this.nom;
 	}
 	
-	public String situation() {
-		double totalDu = 0;
-		int pointsFidelites = 0;
-		Iterator forEach = locations.iterator();
+	public String situation() {		
 		String result = "Situation du client: " + getNom() + "\n";
 		
+		Iterator forEach = locations.iterator();
 		while (forEach.hasNext()) {
-			double du = 0;
 			Location each = (Location) forEach.next();
-			
-			//determine le montant de chaque location
-			switch (each.getFilm().getCodePrix()) {
-			case Film.NORMAL:
-				du += 2;
-				if (each.getNbJours() > 2) 
-					du += (each.getNbJours() - 2) * 1.5;
-				break;
-			case Film.NOUVEAUTE:
-				du += each.getNbJours() * 3;
-				break;
-			case Film.ENFANT:
-				du += 1.5;
-				if (each.getNbJours() > 3)
-					du += (each.getNbJours() - 3) * 1.5;
-				break;
-			}
-			
-			// ajout des points de fid�lit�
-			pointsFidelites++;
-			// ajout d'un bonus pour les nouveaut�s lou�es depuis au moins deux jours
-			if ((each.getFilm().getCodePrix() == Film.NOUVEAUTE) && each.getNbJours() > 1) 
-				pointsFidelites++;
-			
-			// mise en forme location
-			result += "\t" + each.getFilm().getTitre() + "\t" + String.valueOf(du) + "\n";
-			totalDu += du;
+						
+			result += "\t" + each.getFilm().getTitre() + "\t" + String.valueOf(each.getMontant()) + "\n";
 		}
 		
 		// ajout r�capitulatif client
-		result += "Total du " + String.valueOf(totalDu) + "\n";
-		result += "Vous gagnez " + String.valueOf(pointsFidelites) + " points de fidelite\n";
+		result += "Total du " + String.valueOf(getMontantTotal()) + "\n";
+		result += "Vous gagnez " + String.valueOf(getPointsFideliteTotal()) + " points de fidelite\n";
 		
 		return result;
+	}
+
+	private double getMontantTotal() {
+		double totalDu = 0;
+		Iterator forEach = locations.iterator();
+		while (forEach.hasNext()) {
+			Location each = (Location) forEach.next();
+			totalDu += each.getMontant();
+		}
+		return totalDu;
+	}
+
+	private int getPointsFideliteTotal() {
+		int pointsFidelites = 0;
+		Iterator forEach = locations.iterator();
+		while (forEach.hasNext()) {
+			Location each = (Location) forEach.next();
+						
+			pointsFidelites += each.getPointsFidelite();
+			
+		}
+		return pointsFidelites;
 	}
 
 }
