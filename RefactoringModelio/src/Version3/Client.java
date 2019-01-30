@@ -25,9 +25,9 @@ public class Client {
 	public String situation() {		
 		return new SituationText(locations).situation(getNom());
 	}
-
 	
-
-	
+	public String situationHTML() {
+		return new SituationHTML(locations).situation(getNom());
+	}
 
 }

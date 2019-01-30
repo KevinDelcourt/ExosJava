@@ -3,7 +3,7 @@ package Version3;
 public class PrixNormal extends Prix{
 
 	public int getCodePrix() {
-		return 0;
+		return Film.NORMAL;
 	}
 	
 	public double getMontant(Location location) {

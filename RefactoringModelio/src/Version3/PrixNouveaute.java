@@ -3,7 +3,7 @@ package Version3;
 public class PrixNouveaute extends Prix{
 
 	public int getCodePrix() {
-		return 1;
+		return Film.NOUVEAUTE;
 	}
 	
 	public double getMontant(Location location) {

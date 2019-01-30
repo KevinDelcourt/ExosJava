@@ -3,7 +3,7 @@ package Version3;
 public class PrixEnfant extends Prix{
 
 	public int getCodePrix() {
-		return 2;
+		return Film.ENFANT;
 	}
 	
 	public double getMontant(Location location) {
@@ -13,6 +13,4 @@ public class PrixEnfant extends Prix{
 		return montant;
 		
 	}
-	
-
 }

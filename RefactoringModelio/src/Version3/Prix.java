@@ -18,6 +18,10 @@ public abstract class Prix {
 				return new PrixEnfant();
 			case Film.NOUVEAUTE:
 				return new PrixNouveaute();
+			case Film.CINEPHILE:
+				return new PrixCinephile();
+			case Film.COFFRET_SERIES_TV:
+				return new PrixCoffret();
 		}
 		return null;
 	}

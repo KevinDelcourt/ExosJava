@@ -46,8 +46,7 @@ public abstract class Situation {
 		int pointsFidelites = 0;
 		Iterator forEach = locations.iterator();
 		while (forEach.hasNext()) {
-			Location each = (Location) forEach.next();
-						
+			Location each = (Location) forEach.next();		
 			pointsFidelites += each.getFilm().getPrix().getPointsFidelite(each);
 		}
 		return pointsFidelites;
