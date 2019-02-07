@@ -10,6 +10,7 @@
     <DEPENDENCIES>
       <LINK relation="ReferencedDiagram">
         <ID name="Package Structure Diagram (automatic)" mc="Standard.ClassDiagram" uid="c76bfd16-d0a4-4f7e-9abf-798312bc696f"/>
+        <ID name="Package Structure Diagram (automatic)" mc="Standard.ClassDiagram" uid="14ea140e-5b44-40f4-a60b-2a06e590fba6"/>
       </LINK>
     </DEPENDENCIES>
   </OBJECT>

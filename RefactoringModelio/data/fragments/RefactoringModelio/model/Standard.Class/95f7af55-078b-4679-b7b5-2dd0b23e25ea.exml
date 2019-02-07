@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
-<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Film" version="4">
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Client" version="4">
   <OBJECT>
-    <ID name="Film" mc="Standard.Class" uid="31cfdaaf-7af1-4ffe-8355-163d0cda915f"/>
-    <PID name="Version1" mc="Standard.Package" uid="4b7e9ffd-2db8-4c61-8900-f5c898c750cc"/>
+    <ID name="Client" mc="Standard.Class" uid="95f7af55-078b-4679-b7b5-2dd0b23e25ea"/>
+    <PID name="Version2" mc="Standard.Package" uid="303e1d43-fe5f-43ac-9e62-2bbbbbb635a3"/>
     <ATTRIBUTES>
       <ATT name="IsActive">false</ATT>
       <ATT name="IsMain">false</ATT>
@@ -11,13 +11,13 @@
       <ATT name="IsLeaf">false</ATT>
       <ATT name="IsRoot">false</ATT>
       <ATT name="Visibility">Public</ATT>
-      <ATT name="Name"><![CDATA[Film]]></ATT>
+      <ATT name="Name"><![CDATA[Client]]></ATT>
       <ATT name="status">1970354901745664</ATT>
     </ATTRIBUTES>
     <DEPENDENCIES>
       <COMP relation="OwnedOperation">
         <OBJECT>
-          <ID name="Film" mc="Standard.Operation" uid="183683b2-7958-442e-a7ef-4998e0293f85"/>
+          <ID name="Client" mc="Standard.Operation" uid="11e5e110-255b-4e93-8b6e-df9833a50ead"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -25,13 +25,13 @@
             <ATT name="Visibility">Public</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[Film]]></ATT>
+            <ATT name="Name"><![CDATA[Client]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="titre" mc="Standard.Parameter" uid="21893f25-7023-4a30-9ee5-558cc4b7aa0d"/>
+                <ID name="nom" mc="Standard.Parameter" uid="9d4c55b7-7ba0-479c-a512-017fd4927d64"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -43,13 +43,13 @@
                   <ATT name="IsException">false</ATT>
                   <ATT name="IsStream">false</ATT>
                   <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"><![CDATA[titre]]></ATT>
+                  <ATT name="Name"><![CDATA[nom]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <COMP relation="Tag">
                     <OBJECT>
-                      <ID name="" mc="Infrastructure.TaggedValue" uid="381b6b0d-e9bb-492e-a8de-9c3867cc1b47"/>
+                      <ID name="" mc="Infrastructure.TaggedValue" uid="c661cbf2-2166-4dd2-acba-713697688050"/>
                       <ATTRIBUTES>
                         <ATT name="Name"></ATT>
                         <ATT name="status">1970354901745664</ATT>
@@ -57,7 +57,7 @@
                       <DEPENDENCIES>
                         <COMP relation="Actual">
                           <OBJECT>
-                            <ID name="" mc="Infrastructure.TagParameter" uid="04ff3559-4cd6-41ed-93ca-df9ebedae038"/>
+                            <ID name="" mc="Infrastructure.TagParameter" uid="2f220f26-4968-49ef-84e0-b01c6536c89d"/>
                             <ATTRIBUTES>
                               <ATT name="Value"><![CDATA[String]]></ATT>
                               <ATT name="status">1970354901745664</ATT>
@@ -73,8 +73,44 @@
                   </COMP>
                 </DEPENDENCIES>
               </OBJECT>
+            </COMP>
+            <LINK relation="Extension">
+              <FOREIGNID name="create" mc="Infrastructure.Stereotype" uid="00700680-0000-0204-0000-000000000000"/>
+            </LINK>
+            <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="codePrix" mc="Standard.Parameter" uid="d530dd4e-9be3-492c-9649-522a58bf6ffb"/>
+                <ID name="" mc="Infrastructure.Note" uid="9688b575-ccf5-4f8d-a0e3-04b0beb55238"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[this.nom = nom;]]></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaCode" mc="Infrastructure.NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="addLocation" mc="Standard.Operation" uid="56bab23e-6c82-44a2-a453-923ea9b67c92"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[addLocation]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="IO">
+              <OBJECT>
+                <ID name="location" mc="Standard.Parameter" uid="b3c867b9-7bf4-4d6d-8cd9-97c7bd79d26c"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -86,25 +122,239 @@
                   <ATT name="IsException">false</ATT>
                   <ATT name="IsStream">false</ATT>
                   <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"><![CDATA[codePrix]]></ATT>
+                  <ATT name="Name"><![CDATA[location]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Type">
-                    <FOREIGNID name="integer" mc="Standard.DataType" uid="00000004-0000-0009-0000-000000000000"/>
+                    <ID name="Location" mc="Standard.Class" uid="108900d7-a845-460b-919d-24d73cf296d4"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
             </COMP>
-            <LINK relation="Extension">
-              <FOREIGNID name="create" mc="Infrastructure.Stereotype" uid="00700680-0000-0204-0000-000000000000"/>
-            </LINK>
             <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="2a3c50a7-54b0-4238-9382-8cd63be82945"/>
+                <ID name="" mc="Infrastructure.Note" uid="79b630f2-b194-41b0-898d-20eddc5013d6"/>
                 <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[this.titre = titre;
-this.codePrix = codePrix;
+                  <ATT name="Content"><![CDATA[this.locations.add(location);]]></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaCode" mc="Infrastructure.NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="getNom" mc="Standard.Operation" uid="1930a30c-1923-4c7a-8453-6d20e746e000"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[getNom]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Return">
+              <OBJECT>
+                <ID name="" mc="Standard.Parameter" uid="622657ad-672d-4ca2-8b2e-fc957e3632d7"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Tag">
+                    <OBJECT>
+                      <ID name="" mc="Infrastructure.TaggedValue" uid="db838214-7956-473e-b28a-9507b15b2ade"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <COMP relation="Actual">
+                          <OBJECT>
+                            <ID name="" mc="Infrastructure.TagParameter" uid="50270c3f-898d-43aa-9729-c95f33ee0476"/>
+                            <ATTRIBUTES>
+                              <ATT name="Value"><![CDATA[String]]></ATT>
+                              <ATT name="status">1970354901745664</ATT>
+                            </ATTRIBUTES>
+                            <DEPENDENCIES></DEPENDENCIES>
+                          </OBJECT>
+                        </COMP>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaTypeExpr" mc="Infrastructure.TagType" uid="00380080-0000-01a4-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Infrastructure.Note" uid="cdcad13e-b2eb-4430-9737-12121aa651da"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[return this.nom;]]></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaReturned" mc="Infrastructure.NoteType" uid="003800a8-0000-0190-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="situation" mc="Standard.Operation" uid="0cfbfa4e-536c-4394-9994-7167a1f0389f"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[situation]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Return">
+              <OBJECT>
+                <ID name="" mc="Standard.Parameter" uid="b9ebf08f-4cbf-4c27-ac68-cb03f72c012a"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Tag">
+                    <OBJECT>
+                      <ID name="" mc="Infrastructure.TaggedValue" uid="51621bae-6ebf-4058-86cc-8d7dfb3d2227"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <COMP relation="Actual">
+                          <OBJECT>
+                            <ID name="" mc="Infrastructure.TagParameter" uid="bde93706-5260-4ea0-b055-44d1b7126036"/>
+                            <ATTRIBUTES>
+                              <ATT name="Value"><![CDATA[String]]></ATT>
+                              <ATT name="status">1970354901745664</ATT>
+                            </ATTRIBUTES>
+                            <DEPENDENCIES></DEPENDENCIES>
+                          </OBJECT>
+                        </COMP>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="JavaTypeExpr" mc="Infrastructure.TagType" uid="00380080-0000-01a4-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Infrastructure.Note" uid="a14acbb5-fe53-4160-a041-4f422a09ad41"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[return result;]]></ATT>
+                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaReturned" mc="Infrastructure.NoteType" uid="003800a8-0000-0190-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="Infrastructure.Note" uid="5e98d6df-9362-48dd-9068-0f4c77bbdc56"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[double totalDu = 0;
+int pointsFidelites = 0;
+Iterator forEach = locations.iterator();
+String result = "Situation du client: " + getNom() + "\n";
+
+while (forEach.hasNext()) {
+    double du = 0;
+    Location each = (Location) forEach.next();
+    
+    //determine le montant de chaque location
+    switch (each.getFilm().getCodePrix()) {
+    case Film.NORMAL:
+        du += 2;
+        if (each.getNbJours() > 2) 
+            du += (each.getNbJours() - 2) * 1.5;
+        break;
+    case Film.NOUVEAUTE:
+        du += each.getNbJours() * 3;
+        break;
+    case Film.ENFANT:
+        du += 1.5;
+        if (each.getNbJours() > 3)
+            du += (each.getNbJours() - 3) * 1.5;
+        break;
+    case Film.COFFRET_SERIES_TV:
+        du += each.getNbJours() * 0.5;
+        break;
+    case Film.CINEPHILE:
+        du += 2;
+        if (each.getNbJours() > 1)
+            du += (each.getNbJours() - 1) * 4;
+        break;
+    }
+    
+    // ajout des points de fid�lit� sauf pour les coffrets series
+    if((each.getFilm().getCodePrix() != Film.COFFRET_SERIES_TV))
+        pointsFidelites++;
+    // ajout d'un bonus pour les nouveaut�s lou�es depuis au moins deux jours
+    if ((each.getFilm().getCodePrix() == Film.NOUVEAUTE) && each.getNbJours() > 1) 
+        pointsFidelites++;
+    
+    //Ajout de 2 points pour la categorie cinephile louée depuis 1 jour
+    if ((each.getFilm().getCodePrix() == Film.CINEPHILE) && each.getNbJours() <= 1) 
+        pointsFidelites += 2;
+    
+    // mise en forme location
+    result += "\t" + each.getFilm().getTitre() + "\t" + String.valueOf(du) + "\n";
+    totalDu += du;
+}
+
+// ajout r�capitulatif client
+result += "Total du " + String.valueOf(totalDu) + "\n";
+result += "Vous gagnez " + String.valueOf(pointsFidelites) + " points de fidelite\n";
 ]]></ATT>
                   <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
                   <ATT name="Name"></ATT>
@@ -120,7 +370,7 @@ this.codePrix = codePrix;
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="getTitre" mc="Standard.Operation" uid="a4066e66-5b48-48ff-9638-bd30d4d792fd"/>
+          <ID name="situationHTML" mc="Standard.Operation" uid="e349a0e6-ed80-4631-a43a-9ff2cf77cffe"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -128,13 +378,13 @@ this.codePrix = codePrix;
             <ATT name="Visibility">Public</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[getTitre]]></ATT>
+            <ATT name="Name"><![CDATA[situationHTML]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
             <COMP relation="Return">
               <OBJECT>
-                <ID name="" mc="Standard.Parameter" uid="da807e05-35e1-4728-9b71-6c835e53b4d4"/>
+                <ID name="" mc="Standard.Parameter" uid="eca11f3f-a193-434a-a15f-a80c64f51532"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -152,7 +402,7 @@ this.codePrix = codePrix;
                 <DEPENDENCIES>
                   <COMP relation="Tag">
                     <OBJECT>
-                      <ID name="" mc="Infrastructure.TaggedValue" uid="03587c7f-4830-4a50-94fa-a46482f06c81"/>
+                      <ID name="" mc="Infrastructure.TaggedValue" uid="918346e2-f3a2-48d6-9c0c-e9f68ae252f1"/>
                       <ATTRIBUTES>
                         <ATT name="Name"></ATT>
                         <ATT name="status">1970354901745664</ATT>
@@ -160,7 +410,7 @@ this.codePrix = codePrix;
                       <DEPENDENCIES>
                         <COMP relation="Actual">
                           <OBJECT>
-                            <ID name="" mc="Infrastructure.TagParameter" uid="1ad01874-9244-4094-bcdc-45d29ecc2952"/>
+                            <ID name="" mc="Infrastructure.TagParameter" uid="4714378a-1e94-4e55-bc45-40bcd258c1a5"/>
                             <ATTRIBUTES>
                               <ATT name="Value"><![CDATA[String]]></ATT>
                               <ATT name="status">1970354901745664</ATT>
@@ -179,9 +429,9 @@ this.codePrix = codePrix;
             </COMP>
             <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="f9b3ad7c-ecd5-418d-940b-7e14551be91c"/>
+                <ID name="" mc="Infrastructure.Note" uid="d053804c-ad6e-4f0a-b7f8-bdbf7f4bfe14"/>
                 <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[return this.titre;]]></ATT>
+                  <ATT name="Content"><![CDATA[return result;]]></ATT>
                   <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
@@ -192,51 +442,63 @@ this.codePrix = codePrix;
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
-            </COMP>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="setCodePrix" mc="Standard.Operation" uid="b43ed8ac-fc5e-4551-980d-9ed5a626d6aa"/>
-          <ATTRIBUTES>
-            <ATT name="Concurrency">false</ATT>
-            <ATT name="Final">false</ATT>
-            <ATT name="Passing">MethodOut</ATT>
-            <ATT name="Visibility">Public</ATT>
-            <ATT name="IsClass">false</ATT>
-            <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[setCodePrix]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <COMP relation="IO">
               <OBJECT>
-                <ID name="codePrix" mc="Standard.Parameter" uid="506b2bb1-08ce-4904-91f7-5f9baa0e4a98"/>
+                <ID name="" mc="Infrastructure.Note" uid="641be66c-2876-4e29-9acd-c5207ec21602"/>
                 <ATTRIBUTES>
-                  <ATT name="ParameterPassing">In</ATT>
-                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
-                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
-                  <ATT name="TypeConstraint"></ATT>
-                  <ATT name="DefaultValue"></ATT>
-                  <ATT name="IsOrdered">false</ATT>
-                  <ATT name="IsUnique">false</ATT>
-                  <ATT name="IsException">false</ATT>
-                  <ATT name="IsStream">false</ATT>
-                  <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"><![CDATA[codePrix]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Type">
-                    <FOREIGNID name="integer" mc="Standard.DataType" uid="00000004-0000-0009-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-            <COMP relation="Descriptor">
-              <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="262255cf-f390-4a12-be39-fe917ce46d41"/>
-                <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[this.codePrix = codePrix;]]></ATT>
+                  <ATT name="Content"><![CDATA[double totalDu = 0;
+int pointsFidelites = 0;
+Iterator forEach = locations.iterator();
+String result = "<h1>Situation du client: " + getNom() + "</h1>";
+
+while (forEach.hasNext()) {
+    double du = 0;
+    Location each = (Location) forEach.next();
+    
+    //determine le montant de chaque location
+    switch (each.getFilm().getCodePrix()) {
+    case Film.NORMAL:
+        du += 2;
+        if (each.getNbJours() > 2) 
+            du += (each.getNbJours() - 2) * 1.5;
+        break;
+    case Film.NOUVEAUTE:
+        du += each.getNbJours() * 3;
+        break;
+    case Film.ENFANT:
+        du += 1.5;
+        if (each.getNbJours() > 3)
+            du += (each.getNbJours() - 3) * 1.5;
+        break;
+    case Film.COFFRET_SERIES_TV:
+        du += each.getNbJours() * 0.5;
+        break;
+    case Film.CINEPHILE:
+        du += 2;
+        if (each.getNbJours() > 1)
+            du += (each.getNbJours() - 1) * 4;
+        break;
+    }
+    
+    // ajout des points de fid�lit� sauf pour les coffrets series
+    if((each.getFilm().getCodePrix() != Film.COFFRET_SERIES_TV))
+        pointsFidelites++;
+    // ajout d'un bonus pour les nouveaut�s lou�es depuis au moins deux jours
+    if ((each.getFilm().getCodePrix() == Film.NOUVEAUTE) && each.getNbJours() > 1) 
+        pointsFidelites++;
+    
+    //Ajout de 2 points pour la categorie cinephile louée depuis 1 jour
+    if ((each.getFilm().getCodePrix() == Film.CINEPHILE) && each.getNbJours() <= 1) 
+        pointsFidelites += 2;
+    
+    // mise en forme location
+    result += "<h3>" + each.getFilm().getTitre() + " : " + String.valueOf(du) + "</h3>";
+    totalDu += du;
+}
+
+// ajout r�capitulatif client
+result += "<h2>Total du " + String.valueOf(totalDu) + "</h2>";
+result += "<h3>Vous gagnez " + String.valueOf(pointsFidelites) + " points de fidelite</h3>";
+]]></ATT>
                   <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
@@ -250,179 +512,10 @@ this.codePrix = codePrix;
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
-        <OBJECT>
-          <ID name="getCodePrix" mc="Standard.Operation" uid="5befc61b-fe52-429c-a1dc-d9b53eea5fa5"/>
-          <ATTRIBUTES>
-            <ATT name="Concurrency">false</ATT>
-            <ATT name="Final">false</ATT>
-            <ATT name="Passing">MethodOut</ATT>
-            <ATT name="Visibility">Public</ATT>
-            <ATT name="IsClass">false</ATT>
-            <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[getCodePrix]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <COMP relation="Return">
-              <OBJECT>
-                <ID name="" mc="Standard.Parameter" uid="ae3f7d22-eb25-4672-8550-65e3c871a143"/>
-                <ATTRIBUTES>
-                  <ATT name="ParameterPassing">In</ATT>
-                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
-                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
-                  <ATT name="TypeConstraint"></ATT>
-                  <ATT name="DefaultValue"></ATT>
-                  <ATT name="IsOrdered">false</ATT>
-                  <ATT name="IsUnique">false</ATT>
-                  <ATT name="IsException">false</ATT>
-                  <ATT name="IsStream">false</ATT>
-                  <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Type">
-                    <FOREIGNID name="integer" mc="Standard.DataType" uid="00000004-0000-0009-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-            <COMP relation="Descriptor">
-              <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="f2d103aa-2b28-4a4c-9226-778aced5a490"/>
-                <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[return this.codePrix;]]></ATT>
-                  <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Model">
-                    <FOREIGNID name="JavaReturned" mc="Infrastructure.NoteType" uid="003800a8-0000-0190-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-          </DEPENDENCIES>
-        </OBJECT>
       </COMP>
       <COMP relation="OwnedAttribute">
         <OBJECT>
-          <ID name="ENFANT" mc="Standard.Attribute" uid="5cb41344-d544-4ac1-b11f-cd3ec2db7b69"/>
-          <ATTRIBUTES>
-            <ATT name="TypeConstraint"></ATT>
-            <ATT name="Value"><![CDATA[2]]></ATT>
-            <ATT name="TargetIsClass">false</ATT>
-            <ATT name="Changeable">AccesNone</ATT>
-            <ATT name="IsDerived">false</ATT>
-            <ATT name="IsOrdered">false</ATT>
-            <ATT name="IsUnique">false</ATT>
-            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
-            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
-            <ATT name="Visibility">Public</ATT>
-            <ATT name="IsClass">true</ATT>
-            <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[ENFANT]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <LINK relation="Type">
-              <FOREIGNID name="integer" mc="Standard.DataType" uid="00000004-0000-0009-0000-000000000000"/>
-            </LINK>
-            <COMP relation="Tag">
-              <OBJECT>
-                <ID name="" mc="Infrastructure.TaggedValue" uid="c1efe770-db42-47db-af82-f8b32de10bc6"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Definition">
-                    <FOREIGNID name="JavaFinal" mc="Infrastructure.TagType" uid="003800a8-0000-0161-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="NOUVEAUTE" mc="Standard.Attribute" uid="e656fb07-c0e3-4c2b-8425-ea73fcf5357d"/>
-          <ATTRIBUTES>
-            <ATT name="TypeConstraint"></ATT>
-            <ATT name="Value"><![CDATA[1]]></ATT>
-            <ATT name="TargetIsClass">false</ATT>
-            <ATT name="Changeable">AccesNone</ATT>
-            <ATT name="IsDerived">false</ATT>
-            <ATT name="IsOrdered">false</ATT>
-            <ATT name="IsUnique">false</ATT>
-            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
-            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
-            <ATT name="Visibility">Public</ATT>
-            <ATT name="IsClass">true</ATT>
-            <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[NOUVEAUTE]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <LINK relation="Type">
-              <FOREIGNID name="integer" mc="Standard.DataType" uid="00000004-0000-0009-0000-000000000000"/>
-            </LINK>
-            <COMP relation="Tag">
-              <OBJECT>
-                <ID name="" mc="Infrastructure.TaggedValue" uid="285f7e32-c011-47a5-8f75-aff6dfe1870e"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Definition">
-                    <FOREIGNID name="JavaFinal" mc="Infrastructure.TagType" uid="003800a8-0000-0161-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="NORMAL" mc="Standard.Attribute" uid="9e5fb408-10de-490f-ac71-810cc001d480"/>
-          <ATTRIBUTES>
-            <ATT name="TypeConstraint"></ATT>
-            <ATT name="Value"><![CDATA[0]]></ATT>
-            <ATT name="TargetIsClass">false</ATT>
-            <ATT name="Changeable">AccesNone</ATT>
-            <ATT name="IsDerived">false</ATT>
-            <ATT name="IsOrdered">false</ATT>
-            <ATT name="IsUnique">false</ATT>
-            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
-            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
-            <ATT name="Visibility">Public</ATT>
-            <ATT name="IsClass">true</ATT>
-            <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[NORMAL]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <LINK relation="Type">
-              <FOREIGNID name="integer" mc="Standard.DataType" uid="00000004-0000-0009-0000-000000000000"/>
-            </LINK>
-            <COMP relation="Tag">
-              <OBJECT>
-                <ID name="" mc="Infrastructure.TaggedValue" uid="7ff54cda-6ad8-4d46-ba75-af2c28fee93c"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Definition">
-                    <FOREIGNID name="JavaFinal" mc="Infrastructure.TagType" uid="003800a8-0000-0161-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="titre" mc="Standard.Attribute" uid="75c97dd1-f4f8-4332-84de-47a296aafe0a"/>
+          <ID name="nom" mc="Standard.Attribute" uid="4f46a792-27f6-4a80-903a-9b2723134f3e"/>
           <ATTRIBUTES>
             <ATT name="TypeConstraint"></ATT>
             <ATT name="Value"></ATT>
@@ -436,13 +529,13 @@ this.codePrix = codePrix;
             <ATT name="Visibility">Private</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[titre]]></ATT>
+            <ATT name="Name"><![CDATA[nom]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="Infrastructure.TaggedValue" uid="d794eb4d-31c4-45d1-8b3c-8fdd2b03c60e"/>
+                <ID name="" mc="Infrastructure.TaggedValue" uid="386071bc-a502-47d7-bbda-c2488f502e2f"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
@@ -450,7 +543,7 @@ this.codePrix = codePrix;
                 <DEPENDENCIES>
                   <COMP relation="Actual">
                     <OBJECT>
-                      <ID name="" mc="Infrastructure.TagParameter" uid="37a721e5-8937-4f25-8b3b-d9f4360501e7"/>
+                      <ID name="" mc="Infrastructure.TagParameter" uid="73654613-ff11-428c-88ba-2dff4ed91fc3"/>
                       <ATTRIBUTES>
                         <ATT name="Value"><![CDATA[String]]></ATT>
                         <ATT name="status">1970354901745664</ATT>
@@ -464,7 +557,7 @@ this.codePrix = codePrix;
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="" mc="Infrastructure.TaggedValue" uid="0b4ee7f9-9e46-4d6b-b64c-87debaac78b9"/>
+                <ID name="" mc="Infrastructure.TaggedValue" uid="482ec9e8-1c8b-4337-9a73-ce12e74e78e6"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
@@ -479,10 +572,10 @@ this.codePrix = codePrix;
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="codePrix" mc="Standard.Attribute" uid="5ad6e799-253b-47db-bf6c-77d06404302e"/>
+          <ID name="locations" mc="Standard.Attribute" uid="d6bdad26-e7c3-4f03-8e5c-8edec9b692ea"/>
           <ATTRIBUTES>
             <ATT name="TypeConstraint"></ATT>
-            <ATT name="Value"></ATT>
+            <ATT name="Value"><![CDATA[new Vector()]]></ATT>
             <ATT name="TargetIsClass">false</ATT>
             <ATT name="Changeable">AccesNone</ATT>
             <ATT name="IsDerived">false</ATT>
@@ -493,23 +586,30 @@ this.codePrix = codePrix;
             <ATT name="Visibility">Private</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[codePrix]]></ATT>
+            <ATT name="Name"><![CDATA[locations]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
-            <LINK relation="Type">
-              <FOREIGNID name="integer" mc="Standard.DataType" uid="00000004-0000-0009-0000-000000000000"/>
-            </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="Infrastructure.TaggedValue" uid="5bd5ed4e-c1da-43bf-a311-ab38c81c3400"/>
+                <ID name="" mc="Infrastructure.TaggedValue" uid="accf1195-d45d-4b2a-8dee-63170594644a"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
+                  <COMP relation="Actual">
+                    <OBJECT>
+                      <ID name="" mc="Infrastructure.TagParameter" uid="6e7d75af-0c70-4c12-9631-30efb3277e7d"/>
+                      <ATTRIBUTES>
+                        <ATT name="Value"><![CDATA[Vector]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
                   <LINK relation="Definition">
-                    <FOREIGNID name="JavaNoInitValue" mc="Infrastructure.TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+                    <FOREIGNID name="JavaTypeExpr" mc="Infrastructure.TagType" uid="003800a8-0000-0165-0000-000000000000"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
@@ -520,9 +620,37 @@ this.codePrix = codePrix;
       <LINK relation="Extension">
         <FOREIGNID name="JavaClass" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
       </LINK>
-      <COMP relation="Product">
-        <COMPID name="Film (structure_autodiagram)" mc="Standard.ClassDiagram" uid="5f15d9b0-f600-4a37-9b68-0b4514ee61de"/>
-        <COMPID name="Class Architecture Diagram (automatic)" mc="Standard.ClassDiagram" uid="92ea7975-9b27-4169-9444-1e0d3f867d13"/>
+      <COMP relation="Tag">
+        <OBJECT>
+          <ID name="" mc="Infrastructure.TaggedValue" uid="7f166b0e-4e2e-4352-867c-3cefd7cacd58"/>
+          <ATTRIBUTES>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Actual">
+              <OBJECT>
+                <ID name="" mc="Infrastructure.TagParameter" uid="aba2d342-d882-4884-97b5-af9dc35c32a6"/>
+                <ATTRIBUTES>
+                  <ATT name="Value"><![CDATA[java.util.Vector]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="Infrastructure.TagParameter" uid="c0b3a522-8868-4ad2-8ea2-e36bf5e3f304"/>
+                <ATTRIBUTES>
+                  <ATT name="Value"><![CDATA[java.util.Iterator]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <LINK relation="Definition">
+              <FOREIGNID name="JavaImport" mc="Infrastructure.TagType" uid="003800a8-0000-0155-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
       </COMP>
     </DEPENDENCIES>
   </OBJECT>

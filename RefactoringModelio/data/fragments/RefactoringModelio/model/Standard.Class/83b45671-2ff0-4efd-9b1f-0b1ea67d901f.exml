@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 <!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Location" version="4">
   <OBJECT>
-    <ID name="Location" mc="Standard.Class" uid="285bbf35-3974-4e87-8986-8aa6b2f5f21b"/>
-    <PID name="Version1" mc="Standard.Package" uid="4b7e9ffd-2db8-4c61-8900-f5c898c750cc"/>
+    <ID name="Location" mc="Standard.Class" uid="83b45671-2ff0-4efd-9b1f-0b1ea67d901f"/>
+    <PID name="Version3" mc="Standard.Package" uid="f6aa13db-6fd5-47dc-9b4f-f2ba0582db64"/>
     <ATTRIBUTES>
       <ATT name="IsActive">false</ATT>
       <ATT name="IsMain">false</ATT>
@@ -17,7 +17,7 @@
     <DEPENDENCIES>
       <COMP relation="OwnedOperation">
         <OBJECT>
-          <ID name="Location" mc="Standard.Operation" uid="c93fd21d-aeab-4938-8050-e1cd90b7eae3"/>
+          <ID name="Location" mc="Standard.Operation" uid="e84277d7-e86d-4adc-a97f-0074e9c7d9e9"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -31,7 +31,7 @@
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="unFilm" mc="Standard.Parameter" uid="67b83d64-846b-4fe5-9321-2dd746770909"/>
+                <ID name="unFilm" mc="Standard.Parameter" uid="5b59a122-77ef-4c59-a07e-95d7b07dc4b1"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -48,12 +48,12 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Type">
-                    <ID name="Film" mc="Standard.Class" uid="31cfdaaf-7af1-4ffe-8355-163d0cda915f"/>
+                    <ID name="Film" mc="Standard.Class" uid="590d7727-9a91-4bf5-a998-a3e722884d68"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="nbJours" mc="Standard.Parameter" uid="300ee028-4735-401d-9d5e-dda181b97ff7"/>
+                <ID name="nbJours" mc="Standard.Parameter" uid="130dd83b-5fdb-47dd-bd0e-ac4f2712f3d4"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -80,7 +80,7 @@
             </LINK>
             <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="f688f740-d337-46fa-8926-418b137f0fa9"/>
+                <ID name="" mc="Infrastructure.Note" uid="c7db63ca-249d-4299-9b6f-9598401aeb3f"/>
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[this.unFilm = unFilm;
 this.nbJours = nbJours;
@@ -99,7 +99,7 @@ this.nbJours = nbJours;
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="getNbJours" mc="Standard.Operation" uid="26c73502-e6b1-4903-bbcf-66bc24e858c2"/>
+          <ID name="getNbJours" mc="Standard.Operation" uid="ef04146a-8824-457e-b3f0-e567847ed10e"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -113,7 +113,7 @@ this.nbJours = nbJours;
           <DEPENDENCIES>
             <COMP relation="Return">
               <OBJECT>
-                <ID name="" mc="Standard.Parameter" uid="1fdbf4bc-d01e-443f-a91e-a8fe081e377f"/>
+                <ID name="" mc="Standard.Parameter" uid="09f20ce0-c945-4045-b20c-813c94b7ba00"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -137,7 +137,7 @@ this.nbJours = nbJours;
             </COMP>
             <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="eb3a63e3-aaa9-4051-8170-7bd63d7dae47"/>
+                <ID name="" mc="Infrastructure.Note" uid="51db80f9-408e-43ae-8f1b-a4177b33b434"/>
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[return this.nbJours;]]></ATT>
                   <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
@@ -154,7 +154,7 @@ this.nbJours = nbJours;
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="getFilm" mc="Standard.Operation" uid="3c640fb0-cc37-4eca-afb4-97ae0bb0170e"/>
+          <ID name="getFilm" mc="Standard.Operation" uid="9cee7eb5-5bdf-4553-a4a9-f126e72d8689"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
@@ -168,7 +168,7 @@ this.nbJours = nbJours;
           <DEPENDENCIES>
             <COMP relation="Return">
               <OBJECT>
-                <ID name="" mc="Standard.Parameter" uid="41a7fd7a-2569-49c6-92d9-d845e72b0b6a"/>
+                <ID name="" mc="Standard.Parameter" uid="0c16bce8-9e23-4943-9f8e-b1f4fcbce110"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
                   <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
@@ -185,14 +185,14 @@ this.nbJours = nbJours;
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Type">
-                    <ID name="Film" mc="Standard.Class" uid="31cfdaaf-7af1-4ffe-8355-163d0cda915f"/>
+                    <ID name="Film" mc="Standard.Class" uid="590d7727-9a91-4bf5-a998-a3e722884d68"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
             </COMP>
             <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Infrastructure.Note" uid="e08d933e-0e3c-4d82-9337-b8f5a461bf47"/>
+                <ID name="" mc="Infrastructure.Note" uid="d394fe11-6a96-4974-80e7-436444006f68"/>
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[return this.unFilm;]]></ATT>
                   <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
@@ -211,7 +211,7 @@ this.nbJours = nbJours;
       </COMP>
       <COMP relation="OwnedAttribute">
         <OBJECT>
-          <ID name="nbJours" mc="Standard.Attribute" uid="091f29f3-8f36-46a1-8a37-b3e49de4a71a"/>
+          <ID name="nbJours" mc="Standard.Attribute" uid="90fdaeb0-6fba-4a2d-8029-78725d882ab9"/>
           <ATTRIBUTES>
             <ATT name="TypeConstraint"></ATT>
             <ATT name="Value"></ATT>
@@ -234,7 +234,7 @@ this.nbJours = nbJours;
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="Infrastructure.TaggedValue" uid="878ea30d-fe66-4711-a4fe-b7b816a46b77"/>
+                <ID name="" mc="Infrastructure.TaggedValue" uid="37f38888-5e4f-44a4-81ed-82224c973fe4"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
@@ -251,7 +251,7 @@ this.nbJours = nbJours;
       </COMP>
       <COMP relation="OwnedEnd">
         <OBJECT>
-          <ID name="unFilm" mc="Standard.AssociationEnd" uid="2256e245-37df-4244-959d-d3f9de788ff0"/>
+          <ID name="unFilm" mc="Standard.AssociationEnd" uid="6ac79e83-335d-413e-a5cf-9f36bd655882"/>
           <ATTRIBUTES>
             <ATT name="Aggregation">KindIsAssociation</ATT>
             <ATT name="IsChangeable">true</ATT>
@@ -269,11 +269,11 @@ this.nbJours = nbJours;
           </ATTRIBUTES>
           <DEPENDENCIES>
             <LINK relation="Target">
-              <ID name="Film" mc="Standard.Class" uid="31cfdaaf-7af1-4ffe-8355-163d0cda915f"/>
+              <ID name="Film" mc="Standard.Class" uid="590d7727-9a91-4bf5-a998-a3e722884d68"/>
             </LINK>
             <COMP relation="Opposite">
               <OBJECT>
-                <ID name="" mc="Standard.AssociationEnd" uid="fa7223f5-49b8-48b0-a5ac-59df5b1bba41"/>
+                <ID name="" mc="Standard.AssociationEnd" uid="b55ed933-d677-47b3-8088-e73223a10098"/>
                 <ATTRIBUTES>
                   <ATT name="Aggregation">KindIsAssociation</ATT>
                   <ATT name="IsChangeable">true</ATT>
@@ -291,11 +291,11 @@ this.nbJours = nbJours;
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <COMP relation="Opposite">
-                    <COMPID name="unFilm" mc="Standard.AssociationEnd" uid="2256e245-37df-4244-959d-d3f9de788ff0"/>
+                    <COMPID name="unFilm" mc="Standard.AssociationEnd" uid="6ac79e83-335d-413e-a5cf-9f36bd655882"/>
                   </COMP>
                   <COMP relation="Association">
                     <OBJECT>
-                      <ID name="" mc="Standard.Association" uid="ff269736-8eb7-4506-bfd4-f79ba01518f6"/>
+                      <ID name="" mc="Standard.Association" uid="04180cff-0438-42ff-a797-85367c1b60ad"/>
                       <ATTRIBUTES>
                         <ATT name="Name"></ATT>
                         <ATT name="status">1970354901745664</ATT>
@@ -307,11 +307,11 @@ this.nbJours = nbJours;
               </OBJECT>
             </COMP>
             <COMP relation="Association">
-              <COMPID name="" mc="Standard.Association" uid="ff269736-8eb7-4506-bfd4-f79ba01518f6"/>
+              <COMPID name="" mc="Standard.Association" uid="04180cff-0438-42ff-a797-85367c1b60ad"/>
             </COMP>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="Infrastructure.TaggedValue" uid="591b3b04-4b4c-47ef-907e-083917033e18"/>
+                <ID name="" mc="Infrastructure.TaggedValue" uid="4ec88447-4520-425a-b251-32c139b89533"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
@@ -329,9 +329,6 @@ this.nbJours = nbJours;
       <LINK relation="Extension">
         <FOREIGNID name="JavaClass" mc="Infrastructure.Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
       </LINK>
-      <COMP relation="Product">
-        <COMPID name="Location (structure_autodiagram)" mc="Standard.ClassDiagram" uid="658d9eed-04a5-481b-850f-ed58e631a508"/>
-      </COMP>
     </DEPENDENCIES>
   </OBJECT>
 </EXT>

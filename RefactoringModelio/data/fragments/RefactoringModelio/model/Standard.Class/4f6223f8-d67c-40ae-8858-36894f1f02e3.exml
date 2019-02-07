@@ -47,9 +47,6 @@
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
-                  <LINK relation="Type">
-                    <FOREIGNID name="string" mc="Standard.DataType" uid="00000004-0000-000d-0000-000000000000"/>
-                  </LINK>
                   <COMP relation="Tag">
                     <OBJECT>
                       <ID name="" mc="Infrastructure.TaggedValue" uid="4ced702d-a42b-4c50-b4a8-0e26d8b72eee"/>
@@ -184,9 +181,6 @@
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
-                  <LINK relation="Type">
-                    <FOREIGNID name="string" mc="Standard.DataType" uid="00000004-0000-000d-0000-000000000000"/>
-                  </LINK>
                   <COMP relation="Tag">
                     <OBJECT>
                       <ID name="" mc="Infrastructure.TaggedValue" uid="79ec5c2c-5612-4272-bfee-d8a955df55e7"/>
@@ -266,9 +260,6 @@
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
-                  <LINK relation="Type">
-                    <FOREIGNID name="string" mc="Standard.DataType" uid="00000004-0000-000d-0000-000000000000"/>
-                  </LINK>
                   <COMP relation="Tag">
                     <OBJECT>
                       <ID name="" mc="Infrastructure.TaggedValue" uid="98945faf-eb9d-4b01-b7fc-2bdc8a1bc6d3"/>
@@ -352,8 +343,8 @@ while (forEach.hasNext()) {
 }
 
 // ajout r�capitulatif client
-result += "Total d� " + String.valueOf(totalDu) + "\n";
-result += "Vous gagnez " + String.valueOf(pointsFidelites) + " points de fid�lit�\n";
+result += "Total du " + String.valueOf(totalDu) + "\n";
+result += "Vous gagnez " + String.valueOf(pointsFidelites) + " points de fidelite\n";
 ]]></ATT>
                   <ATT name="MimeType"><![CDATA[text/plain]]></ATT>
                   <ATT name="Name"></ATT>
@@ -389,9 +380,6 @@ result += "Vous gagnez " + String.valueOf(pointsFidelites) + " points de fid�l
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
-            <LINK relation="Type">
-              <FOREIGNID name="string" mc="Standard.DataType" uid="00000004-0000-000d-0000-000000000000"/>
-            </LINK>
             <COMP relation="Tag">
               <OBJECT>
                 <ID name="" mc="Infrastructure.TaggedValue" uid="0a94916e-2ecf-4d51-b1ed-624726a4807b"/>
@@ -416,7 +404,7 @@ result += "Vous gagnez " + String.valueOf(pointsFidelites) + " points de fid�l
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
-                <ID name="" mc="Infrastructure.TaggedValue" uid="084e25bf-8f46-4d75-89ce-6582fd47ffe2"/>
+                <ID name="" mc="Infrastructure.TaggedValue" uid="ae850465-5129-4e67-b6a5-d181eb7dc760"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
@@ -449,9 +437,6 @@ result += "Vous gagnez " + String.valueOf(pointsFidelites) + " points de fid�l
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
-            <LINK relation="Type">
-              <FOREIGNID name="undefined" mc="Standard.DataType" uid="00000004-0000-000f-0000-000000000000"/>
-            </LINK>
             <COMP relation="Tag">
               <OBJECT>
                 <ID name="" mc="Infrastructure.TaggedValue" uid="82c078ce-fa4b-4692-9774-4c15a7aa0c09"/>
