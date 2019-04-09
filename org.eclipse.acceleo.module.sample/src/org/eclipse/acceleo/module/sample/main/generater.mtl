@@ -1,0 +1,17 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module generater.
+ */]
+[module generater('http://www.lpdql.org/automaton/1.0')]
+
+
+[**
+ * The documentation of the template oui.
+ * @param anAutomaton
+ */]
+[template public oui(anAutomaton : Automaton)]
+[comment @main/]
+[file (anAutomaton.name, false, 'UTF-8')]
+	WOOOOOOO
+[/file]
+[/template]

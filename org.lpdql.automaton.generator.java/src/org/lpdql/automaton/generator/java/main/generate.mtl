@@ -1,0 +1,10 @@
+[comment encoding = UTF-8 /]
+[module generate('http://www.lpdql.org/automaton/1.0')]
+
+[template public generateAutomaton(anAutomaton : Automaton)]
+	[comment @main/]
+	[file (anAutomaton.name.concat('.txt'), false, 'UTF-8')]
+		youuuuu [anAutomaton.name/]
+
+	[/file]
+[/template]
