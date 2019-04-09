@@ -1,30 +1,18 @@
 package expressions_logiques;
 
-public class OperandeBinaire extends Satisfiable {
+public abstract class OperandeBinaire extends Satisfiable {
 
-	public void setOperandeGauche(OperandeUnaire nonA) {
-		// TODO Auto-generated method stub
+	protected Satisfiable operandeGauche;
+	protected Satisfiable operandeDroit;
+	
+	public void setOperandeGauche(Satisfiable satisfiable) {
+		this.operandeGauche = satisfiable;
 		
 	}
 
-	public void setOperandeDroit(VariableBooléenne c) {
-		// TODO Auto-generated method stub
-		
+	public void setOperandeDroit(Satisfiable satisfiable) {
+		this.operandeDroit = satisfiable;
 	}
 
-	public void setOperandeGauche(OperandeBinaire conjonctionGauche) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void setOperandeDroit(OperandeBinaire conjonctionDroite) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void setOperandeGauche(VariableBooléenne a) {
-		// TODO Auto-generated method stub
-		
-	}
 
 }

@@ -1,10 +1,7 @@
 package expressions_logiques;
 
-public class Satisfiable {
+public abstract class Satisfiable {
+	public abstract boolean isSatisfiable();
 
-	public boolean isSatisfiable() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
+	public abstract String toString();
 }

@@ -1,6 +1,6 @@
 package expressions_logiques;
 
-public class VariableBooléenne {
+public class VariableBooléenne extends Satisfiable {
 
 	private boolean valeur;
 	private String nomVariable, descriptionVariable;
@@ -8,7 +8,7 @@ public class VariableBooléenne {
 	public VariableBooléenne(String nomVariable, String descriptionVariable) {
 		this.nomVariable = nomVariable;
 		this.descriptionVariable = descriptionVariable;
-		valeur = true;
+		this.valeur = true;
 	}
 
 	public void fixerValeurDeVérité(boolean valeur) {
@@ -16,10 +16,18 @@ public class VariableBooléenne {
 	}
 
 	public String interprétation() {
-		if(valeur)
+		if(this.valeur)
 			return descriptionVariable;
 		else
 			return "non "+descriptionVariable;
+	}
+
+	public boolean isSatisfiable() {
+		return this.valeur;
+	}
+
+	public String toString() {
+		return this.nomVariable;
 	}
 
 }

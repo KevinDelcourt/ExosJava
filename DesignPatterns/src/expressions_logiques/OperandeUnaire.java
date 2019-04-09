@@ -1,10 +1,11 @@
 package expressions_logiques;
 
-public class OperandeUnaire extends Satisfiable{
+public abstract class OperandeUnaire extends Satisfiable{
 
-	public void setOperande(VariableBooléenne a) {
-		// TODO Auto-generated method stub
-		
+	protected Satisfiable operande;
+	
+	public void setOperande(Satisfiable satisfiable) {
+		this.operande = satisfiable;
 	}
 
 }
