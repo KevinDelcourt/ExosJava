@@ -2,12 +2,15 @@ package expressions_logiques;
 
 public class And extends OperandeBinaire {
 
-	public boolean isSatisfiable() {
-		return this.operandeGauche.isSatisfiable() && this.operandeDroit.isSatisfiable() ;
+	public And() {
+		super(".");
 	}
 
-	public String toString() {
-		return "("+this.operandeGauche+"."+this.operandeDroit+")";
+	public boolean isSatisfiable() {
+		if(!super.isValid())
+			return false;
+		
+		return this.operandeGauche.isSatisfiable() && this.operandeDroit.isSatisfiable() ;
 	}
 	
 }
