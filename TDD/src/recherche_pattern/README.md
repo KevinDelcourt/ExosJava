@@ -15,24 +15,24 @@ Par ailleurs j'ai pu comparer les performances de cet algorithme avec un algorit
 Voir ci-dessous un extrait du rapport généré par les tests:
 
 *NaiveRecherchePattern*
-Recherche de 'WHICH'(5)
-Dans '...WHICH-FINALLY-HALTS.--AT-THAT-POINT...'(41)
-8 Itérations
+  Recherche de 'WHICH'(5)
+  Dans '...WHICH-FINALLY-HALTS.--AT-THAT-POINT...'(41)
+  8 Itérations
 
 *FastRecherchePattern*
-Recherche de 'WHICH'(5)
-Dans '...WHICH-FINALLY-HALTS.--AT-THAT-POINT...'(41)
-7 Itérations
+  Recherche de 'WHICH'(5)
+  Dans '...WHICH-FINALLY-HALTS.--AT-THAT-POINT...'(41)
+  7 Itérations
 
 *NaiveRecherchePattern*
-Recherche de 'NT...'(5)
-Dans '...WHICH-FINALLY-HALTS.--AT-THAT-POINT...'(41)
-42 Itérations
+  Recherche de 'NT...'(5)
+  Dans '...WHICH-FINALLY-HALTS.--AT-THAT-POINT...'(41)
+  42 Itérations
 
 *FastRecherchePattern*
-Recherche de 'NT...'(5)
-Dans '...WHICH-FINALLY-HALTS.--AT-THAT-POINT...'(41)
-15 Itérations
+  Recherche de 'NT...'(5)
+  Dans '...WHICH-FINALLY-HALTS.--AT-THAT-POINT...'(41)
+  15 Itérations
 
 *NaiveRecherchePattern*
 Recherche de 'AT-THAT'(7)
@@ -40,6 +40,6 @@ Dans '...WHICH-FINALLY-HALTS.--AT-THAT-POINT...'(41)
 34 Itérations
 
 *FastRecherchePattern*
-Recherche de 'AT-THAT'(7)
-Dans '...WHICH-FINALLY-HALTS.--AT-THAT-POINT...'(41)
-14 Itérations
+  Recherche de 'AT-THAT'(7)
+  Dans '...WHICH-FINALLY-HALTS.--AT-THAT-POINT...'(41)
+  14 Itérations
