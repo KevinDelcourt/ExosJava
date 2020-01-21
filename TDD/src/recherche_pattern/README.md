@@ -4,13 +4,11 @@ L'objectif de ce travail est de retrouver en Java et en suivant une démarche TD
 
 ## Démarche adoptée
 
-Afin de saisir le comportement de l'algorithme et trouver les tests nécessaires à son implémentation j'ai mis en place [ce document](https://docs.google.com/spreadsheets/d/1OfKWaikgvrTAu7jdkFHZ7jvELX9LYWJtjClGfXqf4KA/edit#gid=0) comme support de mes recherches. Ensuite, afin de pouvoir tester la performance de l'algorithme, qui est le seul point le différenciant d'un algorithme de recherche classique il m'a fallu d'abord réaliser [Une classe abstraite](https://github.com/KevinDelcourt/ExosJava/blob/master3/TDD/src/recherche_pattern/MesurableRecherchePattern.java) ayant la charge de compter le nombre d'accès à la chaîne dans laquelle s'effectue la recherche. Cela m'a permis de d'écrire des tests vérifiant que mon implémentation respectait les performances décrites dans l'article.
-
-## Conclusion
+Afin de saisir le comportement de l'algorithme et trouver les tests nécessaires à son implémentation j'ai mis en place [ce document](https://docs.google.com/spreadsheets/d/1OfKWaikgvrTAu7jdkFHZ7jvELX9LYWJtjClGfXqf4KA/edit#gid=0) comme support de mes recherches. Ensuite, afin de pouvoir tester la performance de l'algorithme, qui est le seul point le différenciant d'un algorithme de recherche classique il m'a fallu d'abord réaliser [Une classe abstraite](https://github.com/KevinDelcourt/ExosJava/blob/master3/TDD/src/recherche_pattern/MesurableRecherchePattern.java) ayant la charge de compter le nombre d'accès à la chaîne dans laquelle s'effectue la recherche. Cela a permis d'écrire les tests vérifiant que mon implémentation respecte les performances décrites dans l'article.
 
 J'ai ainsi pu reconstituer une implémentation de l'algorithme Boyer-Moore en java respectant les exigences de l'article, en en implémentant les termes clés (delta1, delta2, rightmostPlausibleReoccurence...) sous formes de fonctions testées.
 
-Par ailleurs j'ai pu comparer les performances de cet algorithme avec un algorithme de recherche naif (de complexité quadratique).
+Par ailleurs j'ai pu comparer les performances de cet algorithme avec un algorithme de recherche naif de complexité quadratique.
 
 Voir ci-dessous un extrait du rapport généré par les tests:
 
@@ -43,3 +41,7 @@ Voir ci-dessous un extrait du rapport généré par les tests:
 - Recherche de 'AT-THAT'(7)
 - Dans '...WHICH-FINALLY-HALTS.--AT-THAT-POINT...'(41)
 - 14 Itérations
+
+## Conclusion
+
+Outre le gain de performance entre l'algorithme Boyer-Moore et un algorithme naïf, conforme aux statistiques présentes dans l'article, on constate que cette implémentation respecte la spécification décrite dans l'article. En effet, la recherche de 'AT-THAT' dans la chaîne de caractères '...WHICH-FINALLY-HALTS.--AT-THAT-POINT...' se fait en 14 références à la chaîne de caractères cible.
